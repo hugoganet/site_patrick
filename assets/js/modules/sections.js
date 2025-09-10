@@ -2,7 +2,7 @@
 import { $, $$, createElement, debounce } from '../utils/dom.js';
 import { isElementAtTop } from '../utils/scroll.js';
 import { mediaSections, config } from '../config.js';
-import { showGallerySection } from './gallery.js';
+import { scrollToSection } from './navigation.js';
 import { isModalVisible } from './modal.js';
 
 const activeSectionButtons = new Map();
@@ -106,7 +106,7 @@ function addSectionButton(section) {
     
     btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        showGallerySection(section);
+        scrollToSection(section);
     });
     
     positionSectionButton(btn);
