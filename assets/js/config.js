@@ -30,6 +30,45 @@ export const mediaSections = {
         '03-PalaisdeTokyo/05_03-PDT-Anim02.mp4',
         '03-PalaisdeTokyo/06_03-PDT-Image03.png',
         '03-PalaisdeTokyo/07_03-PDT-Anim03.mp4',
+    ],
+    'Stereolux': [
+        '04-Stereolux/01_04-STEREO-Image01.png',
+        '04-Stereolux/02_04-STEREO-Anim01.mp4',
+        '04-Stereolux/03_04-STEREO-Anim02.mp4',
+        '04-Stereolux/04_04-STEREO-Image02.png',
+        '04-Stereolux/05_04-STEREO-Anim03.mp4',
+        '04-Stereolux/06_04-STEREO-Image03.png',
+        '04-Stereolux/07_04-STEREO-Anim04.mp4',
+        '04-Stereolux/08_04-STEREO-Anim05.mp4',
+        '04-Stereolux/09_04-STEREO-Image04.png'
+    ],
+    'Pygmalion': [
+        '05-Pygmalion/01_05-PYG-Anim01.mp4',
+        '05-Pygmalion/02_05-PYG-Image01.png',
+        '05-Pygmalion/03_05-PYG-Image02.jpg',
+        '05-Pygmalion/04_05-PYG-Anim02.mp4',
+        '05-Pygmalion/05_05-PYG-Image03.png',
+        '05-Pygmalion/06_05-PYG-Image04.png',
+        '05-Pygmalion/07_05-PYG-Anim03.mp4',
+        '05-Pygmalion/08_05-PYG-Image05.jpg',
+        '05-Pygmalion/09_05-PYG-Image06.png',
+        '05-Pygmalion/10_05-PYG-Anim04.mp4',
+        '05-Pygmalion/11_05-PYG-Anim05.mp4'
+    ],
+    'Pili': [
+        '06-Pili/01_06-Pili-Image01.png',
+        '06-Pili/02_06-Pili-Anim01.mp4',
+        '06-Pili/03_06-Pili-Image02.png',
+        '06-Pili/04_06-Pili-Image03.png',
+        '06-Pili/05_06-Pili-Image04.png',
+        '06-Pili/06_06-Pili-Image05.png',
+        '06-Pili/07_06-Pili-Image06.jpg',
+        '06-Pili/08_06-Pili-Anim02.mp4',
+        '06-Pili/09_06-Pili-Image07.jpg',
+        '06-Pili/10_06-Pili-Image08.png',
+        '06-Pili/11_06-Pili-Anim03.mp4',
+        '06-Pili/12_06-Pili-Image09.png',
+        '06-Pili/13_06-Pili-Image10.png'
     ]
 };
 
