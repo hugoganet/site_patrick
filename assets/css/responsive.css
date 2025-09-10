@@ -72,7 +72,7 @@
 
     /* White zone mobile layout */
     .gallery-white-zone {
-        margin: 25px 0 0 25px !important;
+        margin: 25px 0 0 0 !important;
     }
 
     .white-zone-layout {
@@ -89,7 +89,7 @@
         width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
-        margin-left: 0 !important;
+        margin-left: 25px !important;
         margin-right: 0 !important;
         border-bottom: none !important;
     }
@@ -139,6 +139,17 @@
 
     .services ul {
         columns: 2;
+    }
+
+    /* White zone mobile layout - ensure 25px left margin */
+    .gallery-white-zone {
+        margin: 25px 0 0 0 !important;
+    }
+
+    .white-zone-left,
+    .white-zone-center,
+    .white-zone-right {
+        margin-left: 25px !important;
     }
 }
 
