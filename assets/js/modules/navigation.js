@@ -54,8 +54,16 @@ export function toggleWorkMenu() {
  * Open work menu
  */
 function openWorkMenu() {
+    const isMobile = window.innerWidth <= config.mobileBreakpoint;
+    
     setWorkMenuStyle();
     menu.style.display = 'flex';
+    
+    // Add menu-open class on mobile
+    if (isMobile) {
+        menu.classList.add('menu-open');
+    }
+    
     workBtn.classList.add('negatif');
     workMenuOpen = true;
     hideDynamicSectionButtons();
@@ -66,6 +74,7 @@ function openWorkMenu() {
  */
 export function closeWorkMenu() {
     menu.style.display = 'none';
+    menu.classList.remove('menu-open');
     workBtn.classList.remove('negatif');
     workMenuOpen = false;
     showDynamicSectionButtons();
