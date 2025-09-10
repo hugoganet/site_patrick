@@ -1,0 +1,112 @@
+/* Navigation CSS - Top bar and work menu styles */
+
+/* Top bar */
+.top-bar {
+    mix-blend-mode: exclusion;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1920px;
+    max-width: 100vw;
+    padding: 0;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1920px) {
+    .top-bar {
+        font-weight: 100;
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+}
+
+/* Top buttons */
+.top-btn {
+    mix-blend-mode: normal;
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    font-family: 'indivisible', Arial, sans-serif;
+    background: #fff;
+    color: #111;
+    transition: background 0.2s, color 0.2s, mix-blend-mode 0.2s;
+}
+
+.top-btn:hover {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+/* Work button specific positioning */
+.top-btn.work {
+    position: absolute;
+    left: 220px;
+}
+
+/* Negatif effect for work button when menu is open */
+.top-btn.work.negatif {
+    filter: invert(1) grayscale(1) contrast(2);
+    background: #111;
+    color: #fff;
+}
+
+/* Work menu */
+.work-menu {
+    position: fixed;
+    left: 0;
+    top: 25px;
+    width: auto;
+    margin-top: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 100;
+}
+
+.work-menu .top-btn {
+    mix-blend-mode: normal !important;
+    margin-bottom: 4px;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 0;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'indivisible', Arial, sans-serif;
+    background: #fff;
+    color: #111;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, mix-blend-mode 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    width: auto;
+}
+
+.work-menu .top-btn:last-child {
+    margin-bottom: 0;
+}
+
+.work-menu .top-btn:hover {
+    background: #000000;
+    color: #FFFFFF;
+}

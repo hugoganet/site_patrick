@@ -1,0 +1,131 @@
+/* White Zone CSS - Project description zones */
+
+/* Gallery white zone container */
+.gallery-white-zone {
+    min-height: 400px;
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0px;
+    margin: 25px 0 0 0 !important;
+}
+
+/* White zone layout */
+.white-zone-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
+    position: relative;
+}
+
+/* White zone sections */
+.white-zone-left {
+    flex: 0 0 110px;
+    margin-left: 10px;
+    min-width: 80px;
+    max-width: 140px;
+    font-family: 'indivisible', Arial, sans-serif;
+    font-size: 1em;
+    color: #222;
+    font-weight: 600;
+}
+
+.white-zone-center {
+    flex: 1 1 0;
+    min-width: 300px;
+    max-width: 700px;
+    width: 100%;
+    margin-left: 330px;
+    margin-right: 32px;
+    font-size: 0.95em;
+    color: #222;
+    font-family: 'indivisible', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.white-zone-right {
+    flex: 0 0 180px;
+    min-width: 140px;
+    max-width: 160px;
+    margin-right: 0px;
+    font-family: 'indivisible', Arial, sans-serif;
+    font-size: 0.95em !important;
+    color: #4D4D4D !important;
+    font-weight: 400;
+    text-align: left;
+    align-self: flex-start;
+    position: static;
+    right: auto;
+    top: auto;
+}
+
+/* White zone typography */
+.white-zone-title {
+    font-size: 0.95em !important;
+    font-weight: 600;
+    color: #4D4D4D;
+    font-family: 'indivisible', Arial, sans-serif;
+    margin-bottom: 8px;
+}
+
+.white-zone-credit-label {
+    font-size: 0.95em !important;
+    font-weight: 400;
+    color: #4D4D4D;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    font-family: 'indivisible', Arial, sans-serif;
+}
+
+/* Force text styles */
+.white-zone-left,
+.white-zone-center,
+.white-zone-right {
+    color: #444 !important;
+    font-size: 1em !important;
+    line-height: 1.1 !important;
+}
+
+.white-zone-title {
+    color: #444 !important;
+    font-size: 1em !important;
+    line-height: 1.1 !important;
+    font-weight: 600 !important;
+}
+
+.white-zone-credit-label {
+    color: #444 !important;
+    font-size: 1em !important;
+    line-height: 1.1 !important;
+}
+
+/* Desktop adjustments */
+@media (min-width: 801px) {
+    .white-zone-center {
+        margin-left: 69px !important;
+    }
+
+    .white-zone-right {
+        min-width: 180px !important;
+        margin-left: 80px !important;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .white-zone-layout {
+        gap: 16px;
+    }
+
+    .white-zone-center {
+        max-width: 100%;
+    }
+
+    .white-zone-right {
+        max-width: 160px;
+    }
+}

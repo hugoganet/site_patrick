@@ -1,0 +1,165 @@
+/* Responsive CSS - All media queries */
+
+/* Tablet styles (800px and below) */
+@media (max-width: 800px) {
+    /* Typography */
+    .container h1,
+    .container h2 {
+        font-size: 42pt;
+        line-height: 45pt;
+    }
+
+    .container .desc {
+        font-size: 1.4rem;
+        letter-spacing: 0.04em;
+        line-height: 1.3;
+    }
+
+    .container .services ul {
+        font-size: 1.4rem;
+        letter-spacing: 0.04em;
+        line-height: 1.3;
+    }
+
+    .services ul {
+        columns: 4;
+        column-gap: 24px;
+    }
+
+    /* Container */
+    .container {
+        margin-top: 120px;
+    }
+
+    /* Work button positioning */
+    .top-btn.work {
+        position: static;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    /* Work menu mobile layout */
+    .work-menu {
+        position: fixed !important;
+        top: 79px !important;
+        left: 0 !important;
+        width: 100vw !important;
+        margin-top: 0 !important;
+        border-radius: 0 !important;
+        box-sizing: border-box !important;
+        display: none !important;
+        flex-wrap: wrap !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        gap: 4px 4px !important;
+        z-index: 100 !important;
+        padding: 0 2px !important;
+    }
+
+    .work-menu.menu-open {
+        display: flex !important;
+    }
+
+    /* Section buttons */
+    [id^="sectionBtn-"] {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 90vw !important;
+    }
+
+    /* White zone mobile layout */
+    .white-zone-layout {
+        display: block !important;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .white-zone-left,
+    .white-zone-center,
+    .white-zone-right {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-bottom: none !important;
+    }
+
+    .white-zone-center {
+        max-width: 400px !important;
+        width: 100%;
+        margin-left: 25px !important;
+    }
+
+    /* White zone text styles mobile */
+    .white-zone-left,
+    .white-zone-center,
+    .white-zone-right {
+        color: #444 !important;
+        font-size: 0.95em !important;
+        line-height: 1.1 !important;
+    }
+
+    .white-zone-title {
+        color: #444 !important;
+        font-size: 0.95em !important;
+        line-height: 1.1 !important;
+        font-weight: 600 !important;
+    }
+
+    .white-zone-credit-label {
+        color: #444 !important;
+        font-size: 0.95em !important;
+        line-height: 1.1 !important;
+    }
+}
+
+/* Mobile styles (600px and below) */
+@media (max-width: 600px) {
+    /* Typography */
+    .container h1,
+    .container h2 {
+        font-size: 28pt;
+        line-height: 28pt;
+    }
+
+    .container .desc,
+    .container .services ul {
+        font-size: 1rem;
+    }
+
+    .services ul {
+        columns: 2;
+    }
+}
+
+/* Modal responsive styles */
+@media (max-width: 800px) {
+    #info-modal h1,
+    #info-modal h2 {
+        font-size: 42pt;
+        line-height: 45pt;
+    }
+
+    #info-modal .desc {
+        font-size: 1.4rem;
+        letter-spacing: 0.04em;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 600px) {
+    #info-modal h1,
+    #info-modal h2 {
+        font-size: 28pt;
+        line-height: 28pt;
+    }
+
+    #info-modal .desc {
+        font-size: 1rem;
+    }
+}

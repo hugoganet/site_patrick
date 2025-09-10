@@ -1,0 +1,59 @@
+/* Modal CSS - Info modal styles */
+
+/* Info modal container */
+#info-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: #C8C8C8;
+    z-index: 9999;
+    overflow: auto;
+}
+
+/* Modal content links */
+#info-modal a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    display: inline-block;
+    line-height: 1.1;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* Modal specific container styles */
+#info-modal .container {
+    max-width: 1330px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 120px;
+    margin-bottom: 0;
+    width: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Modal typography */
+#info-modal h1,
+#info-modal h2 {
+    font-size: 70pt;
+    font-weight: 550;
+    line-height: 70pt;
+    margin-bottom: 24px;
+    font-family: 'indivisible-light', 'indivisible', Arial, sans-serif;
+    color: #C8C8C8;
+}
+
+#info-modal .desc {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    color: #C8C8C8;
+    font-family: 'indivisible', Arial, sans-serif;
+    font-weight: 200;
+    max-width: 1300px;
+    width: 100%;
+}

@@ -1,0 +1,91 @@
+/* Main CSS - Base styles and layout */
+
+/* Import component styles */
+@import 'components/navigation.css';
+@import 'components/gallery.css';
+@import 'components/modal.css';
+@import 'components/white-zone.css';
+@import 'responsive.css';
+
+/* Base styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #C8C8C8;
+    font-family: 'indivisible', Arial, sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Typography */
+h1,
+h2 {
+    font-size: 70pt;
+    font-weight: 550;
+    line-height: 70pt;
+    margin-bottom: 24px;
+    font-family: 'indivisible-light', 'indivisible', Arial, sans-serif;
+    color: #C8C8C8;
+}
+
+/* Container */
+.container {
+    max-width: 1330px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 120px;
+    margin-bottom: 0;
+    width: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Description text */
+.desc {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    color: #C8C8C8;
+    font-family: 'indivisible', Arial, sans-serif;
+    font-weight: 200;
+    max-width: 1300px;
+    width: 100%;
+}
+
+/* Services grid */
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    font-family: 'indivisible', Arial, sans-serif;
+    font-weight: 200;
+    color: #C8C8C8;
+    columns: 4;
+    column-gap: 32px;
+}
+
+.services li {
+    color: #C8C8C8;
+}
+
+/* About section */
+.about {
+    margin-bottom: 48px;
+    color: #C8C8C8;
+    padding-left: 35px;
+    padding-right: 35px;
+    box-sizing: border-box;
+}
