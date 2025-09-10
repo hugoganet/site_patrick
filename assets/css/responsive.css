@@ -71,10 +71,15 @@
     }
 
     /* White zone mobile layout */
+    .gallery-white-zone {
+        margin: 25px 0 0 25px !important;
+    }
+
     .white-zone-layout {
         display: block !important;
         flex-direction: column;
         gap: 15px;
+        margin-left: 0;
     }
 
     .white-zone-left,
@@ -92,7 +97,7 @@
     .white-zone-center {
         max-width: 400px !important;
         width: 100%;
-        margin-left: 25px !important;
+        margin-left: 0 !important;
     }
 
     /* White zone text styles mobile */

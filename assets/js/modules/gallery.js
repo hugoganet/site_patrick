@@ -91,15 +91,7 @@ function createMediaElement(file, section, index) {
  */
 function createWhiteZone(section) {
     const whiteZone = createElement('div', {
-        className: 'gallery-white-zone',
-        style: {
-            minHeight: '400px',
-            background: '#fff',
-            width: '100%',
-            boxSizing: 'border-box',
-            padding: '32px 16px',
-            margin: '0 auto'
-        }
+        className: 'gallery-white-zone'
     });
     
     whiteZone.innerHTML = `
@@ -115,14 +107,14 @@ function createWhiteZone(section) {
                 </div>
             </div>
             <div class="white-zone-right">
-                <div style="font-weight:600; margin-bottom:8px;">credits</div>
+                <div class="white-zone-credits-header">credits</div>
                 <div><span class="white-zone-credit-label">Creative direction</span></div>
                 <div>Name Surname</div>
-                <div style="margin-top:8px;">
+                <div class="white-zone-credit-section">
                     <span class="white-zone-credit-label">Design</span><br>
                     Name Surname,<br>Name Surname
                 </div>
-                <div style="margin-top:8px;">
+                <div class="white-zone-credit-section">
                     <span class="white-zone-credit-label">Motion</span><br>
                     Name Surname,<br>Name Surname
                 </div>
