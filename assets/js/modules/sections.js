@@ -1,6 +1,6 @@
 // Sections module - handles dynamic section buttons
 import { $, $$, createElement, debounce } from '../utils/dom.js';
-import { isElementAtTop } from '../utils/scroll.js';
+import { isScrolling } from '../utils/scroll.js';
 import { mediaSections, config } from '../config.js';
 import { scrollToSection } from './navigation.js';
 import { isModalVisible } from './modal.js';
@@ -26,8 +26,8 @@ function updateSectionButtons() {
     const gallery = $('.gallery');
     const infoModal = $('#info-modal');
     
-    // Hide all buttons if info modal is open
-    if (isModalVisible() || (infoModal && infoModal.style.display === 'block')) {
+    // Hide all buttons if info modal is open or currently scrolling programmatically
+    if (isModalVisible() || (infoModal && infoModal.style.display === 'block') || isScrolling()) {
         hideAllSectionButtons();
         return;
     }

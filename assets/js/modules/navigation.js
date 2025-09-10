@@ -1,6 +1,6 @@
 // Navigation module - handles top bar and work menu
 import { $, $$, debounce } from '../utils/dom.js';
-import { smoothScrollTo } from '../utils/scroll.js';
+import { smoothScrollTo, smoothScrollToWithCallback } from '../utils/scroll.js';
 import { config } from '../config.js';
 
 let workMenuOpen = false;
@@ -121,7 +121,8 @@ function initWaransButton() {
         if (btn.textContent.trim().toLowerCase() === 'warans') {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                smoothScrollTo(0);
+                // Use callback-based scroll for consistent behavior
+                smoothScrollToWithCallback(0);
             });
         }
     });

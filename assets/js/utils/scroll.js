@@ -1,7 +1,10 @@
 // Scroll utility functions
 
+let activeScrollPromise = null;
+let isCurrentlyScrolling = false;
+
 /**
- * Smooth scroll to element
+ * Smooth scroll to element with completion detection
  */
 export function smoothScrollTo(element, options = {}) {
     const defaultOptions = {
@@ -18,6 +21,83 @@ export function smoothScrollTo(element, options = {}) {
             behavior: options.behavior || 'smooth'
         });
     }
+}
+
+/**
+ * Smooth scroll with completion Promise
+ */
+export function smoothScrollToWithCallback(element, options = {}) {
+    if (activeScrollPromise) {
+        return activeScrollPromise;
+    }
+    
+    const targetPosition = typeof element === 'number' ? element : getOffsetTop(element);
+    isCurrentlyScrolling = true;
+    
+    activeScrollPromise = new Promise((resolve) => {
+        const startPosition = getScrollPosition().y;
+        const distance = Math.abs(targetPosition - startPosition);
+        
+        // If already at target, resolve immediately
+        if (distance < 5) {
+            isCurrentlyScrolling = false;
+            activeScrollPromise = null;
+            resolve();
+            return;
+        }
+        
+        // Start the scroll
+        smoothScrollTo(element, options);
+        
+        // Monitor scroll completion
+        let rafId;
+        let lastPosition = startPosition;
+        let stableCount = 0;
+        
+        const checkComplete = () => {
+            const currentPosition = getScrollPosition().y;
+            const distanceToTarget = Math.abs(currentPosition - targetPosition);
+            
+            // Check if position is stable (not changing)
+            if (Math.abs(currentPosition - lastPosition) < 1) {
+                stableCount++;
+            } else {
+                stableCount = 0;
+            }
+            
+            lastPosition = currentPosition;
+            
+            // Complete when close to target and stable for a few frames
+            if (distanceToTarget < 5 || stableCount > 3) {
+                isCurrentlyScrolling = false;
+                activeScrollPromise = null;
+                resolve();
+            } else {
+                rafId = requestAnimationFrame(checkComplete);
+            }
+        };
+        
+        rafId = requestAnimationFrame(checkComplete);
+        
+        // Timeout fallback
+        setTimeout(() => {
+            if (activeScrollPromise) {
+                cancelAnimationFrame(rafId);
+                isCurrentlyScrolling = false;
+                activeScrollPromise = null;
+                resolve();
+            }
+        }, 2000);
+    });
+    
+    return activeScrollPromise;
+}
+
+/**
+ * Check if currently scrolling
+ */
+export function isScrolling() {
+    return isCurrentlyScrolling;
 }
 
 /**

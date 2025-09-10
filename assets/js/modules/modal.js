@@ -1,6 +1,6 @@
 // Modal module - handles info modal functionality
 import { $, $$ } from '../utils/dom.js';
-import { smoothScrollTo } from '../utils/scroll.js';
+import { smoothScrollTo, smoothScrollToWithCallback } from '../utils/scroll.js';
 
 let infoModal;
 let isModalOpen = false;
@@ -52,13 +52,32 @@ export function hideInfoModal() {
 }
 
 /**
+ * Hide info modal and scroll to top gracefully
+ */
+export function hideInfoModalAndScrollToTop() {
+    if (!infoModal) return;
+    
+    infoModal.style.display = 'none';
+    isModalOpen = false;
+    
+    // Don't show section buttons immediately - wait for scroll to complete
+    smoothScrollToWithCallback(0).then(() => {
+        // Only show section buttons after scroll animation completes
+        showSectionButtons();
+    });
+}
+
+/**
  * Setup modal close handlers
  */
 function setupModalCloseHandlers() {
-    // Close on clicking warans button in modal
+    // Close on clicking warans button in modal - with graceful scroll to top
     $$('#info-modal .top-btn').forEach(btn => {
         if (btn.textContent.trim().toLowerCase() === 'warans') {
-            btn.addEventListener('click', hideInfoModal);
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                hideInfoModalAndScrollToTop();
+            });
         }
         // Close on clicking info button in modal
         if (btn.textContent.trim().toLowerCase() === 'info') {
