@@ -72,13 +72,13 @@
 
     /* White zone mobile layout */
     .gallery-white-zone {
-        margin: 25px 0 0 0 !important;
         padding-left: 0 !important;
     }
 
     .white-zone-layout {
         display: block !important;
         flex-direction: column;
+		
         gap: 15px;
         margin-left: 0;
     }
@@ -143,7 +143,6 @@
 
     /* White zone mobile layout - ensure 25px left margin */
     .gallery-white-zone {
-        margin: 25px 0 0 0 !important;
         padding-left: 0 !important;
     }
 

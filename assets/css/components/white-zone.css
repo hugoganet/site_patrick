@@ -2,11 +2,11 @@
 
 /* Gallery white zone container */
 .gallery-white-zone {
-    min-height: 400px;
+    min-height: 100px;
     background: #fff;
     width: 100%;
     box-sizing: border-box;
-    margin: 25px 0 0 0 !important;
+    margin: 25px 0 25px 0 !important;
     padding-left: 25px !important;
 }
 
