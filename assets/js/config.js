@@ -188,5 +188,5 @@ export const config = {
     scrollBehavior: 'smooth',
     lazyLoadOffset: '200px',
     debounceDelay: 100,
-    mobileBreakpoint: 800
+    mobileBreakpoint: 900
 };
