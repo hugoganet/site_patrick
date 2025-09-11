@@ -22,8 +22,8 @@
     }
 
     .services ul {
-        columns: 4;
-        column-gap: 24px;
+        columns: 3 !important;
+        column-gap: 24px !important;
     }
 
     /* Container */
@@ -138,7 +138,7 @@
     }
 
     .services ul {
-        columns: 2;
+        columns: 2 !important;
     }
 
     /* White zone mobile layout - ensure 25px left margin */
