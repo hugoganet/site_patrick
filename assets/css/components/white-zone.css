@@ -86,8 +86,14 @@
     /* margin-bottom: 8px; */
 }
 
-.white-zone-credit-section {
-    margin-top: 8px;
+/* Credit names styling for line wrapping control */
+.credit-names {
+    display: block;
+    margin-top: 2px;
+    margin-left: 0;
+    padding-left: 0;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 /* Force text styles */

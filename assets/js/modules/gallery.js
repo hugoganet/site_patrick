@@ -1,6 +1,6 @@
 // Gallery module - handles media rendering and lazy loading
 import { createElement, clearElement, $ } from '../utils/dom.js';
-import { mediaSections, config } from '../config.js';
+import { mediaSections, config, getProjectData, validateProjectData } from '../config.js';
 
 let gallery;
 
@@ -87,42 +87,120 @@ function createMediaElement(file, section, index) {
 }
 
 /**
- * Create white zone with project information
+ * Create white zone with project information from data
  */
 function createWhiteZone(section) {
+    const rawProjectData = getProjectData(section);
+    const project = validateProjectData(rawProjectData);
+    
     const whiteZone = createElement('div', {
         className: 'gallery-white-zone'
     });
     
-    whiteZone.innerHTML = `
-        <div class="white-zone-layout">
-            <div class="white-zone-left">
-                <div>Name</div>
-                <div>2024</div>
-            </div>
-            <div class="white-zone-center">
-                <div class="white-zone-title">"Where the Present Meets Possibility"</div>
-                <div class="white-zone-description">
-                    Decidem in popopotala rem tuam moenatus dtio, cleridi ortimod ictianum fac omnicae deintid in suspim ninte nostries, P. Onsiuportius o consi intia? Voludep sedst que facient? Saturn probortem, quam ne moribus su quam conves bonstru Muli publica estem hos consultu sidium turendam dissiumilum in viderum in verum abutilessium conert publiens bonves vit re comperes, stro ut aur.
-                </div>
-            </div>
-            <div class="white-zone-right">
-                <div class="white-zone-credits-header">credits</div>
-                <div><span class="white-zone-credit-label">Creative direction</span></div>
-                <div>Name Surname</div>
-                <div class="white-zone-credit-section">
-                    <span class="white-zone-credit-label">Design</span><br>
-                    Name Surname,<br>Name Surname
-                </div>
-                <div class="white-zone-credit-section">
-                    <span class="white-zone-credit-label">Motion</span><br>
-                    Name Surname,<br>Name Surname
-                </div>
-            </div>
-        </div>
-    `;
+    const layout = createElement('div', {
+        className: 'white-zone-layout'
+    });
     
+    // Generate sections
+    layout.appendChild(renderProjectMeta(project, section));
+    layout.appendChild(renderProjectDescription(project));
+    layout.appendChild(renderProjectCredits(project.credits));
+    
+    whiteZone.appendChild(layout);
     return whiteZone;
+}
+
+/**
+ * Render project metadata (left section)
+ */
+function renderProjectMeta(project, section) {
+    const leftSection = createElement('div', {
+        className: 'white-zone-left'
+    });
+    
+    const nameDiv = createElement('div', {
+        textContent: project.name
+    });
+    
+    const yearDiv = createElement('div', {
+        textContent: project.year
+    });
+    
+    leftSection.appendChild(nameDiv);
+    leftSection.appendChild(yearDiv);
+    
+    return leftSection;
+}
+
+/**
+ * Render project description (center section)
+ */
+function renderProjectDescription(project) {
+    const centerSection = createElement('div', {
+        className: 'white-zone-center'
+    });
+    
+    const titleDiv = createElement('div', {
+        className: 'white-zone-title',
+        textContent: `"${project.title}"`
+    });
+    
+    const descriptionDiv = createElement('div', {
+        className: 'white-zone-description',
+        textContent: project.description
+    });
+    
+    centerSection.appendChild(titleDiv);
+    centerSection.appendChild(descriptionDiv);
+    
+    return centerSection;
+}
+
+/**
+ * Render project credits (right section)
+ */
+function renderProjectCredits(credits) {
+    const rightSection = createElement('div', {
+        className: 'white-zone-right'
+    });
+    
+    const creditsHeader = createElement('div', {
+        className: 'white-zone-credits-header',
+        textContent: 'credits'
+    });
+    
+    rightSection.appendChild(creditsHeader);
+    
+    // Add each credit section
+    Object.entries(credits).forEach(([role, people]) => {
+        rightSection.appendChild(formatCreditSection(role, people));
+    });
+    
+    return rightSection;
+}
+
+/**
+ * Format individual credit section
+ */
+function formatCreditSection(role, people) {
+    const creditSection = createElement('div', {
+        className: 'white-zone-credit-section'
+    });
+    
+    const roleLabel = createElement('span', {
+        className: 'white-zone-credit-label',
+        textContent: role
+    });
+    
+    const namesDiv = createElement('div', {
+        className: 'credit-names',
+        textContent: people.join(', ')
+    });
+    
+    creditSection.appendChild(roleLabel);
+    creditSection.appendChild(namesDiv);
+    
+    return creditSection;
 }
 
 /**

@@ -104,6 +104,11 @@
         width: 100%;
     }
 
+    .white-zone-right {
+        max-width: 400px !important;
+        width: 100%;
+    }
+
     /* White zone text styles mobile */
     .white-zone-left,
     .white-zone-center,
@@ -124,6 +129,14 @@
         color: #444 !important;
         font-size: 0.95em !important;
         line-height: 1.1 !important;
+    }
+
+    /* Credit names mobile behavior */
+    .credit-names {
+        display: block;
+        margin-top: 2px;
+        word-break: break-word;
+        line-height: 1.2;
     }
 }
 

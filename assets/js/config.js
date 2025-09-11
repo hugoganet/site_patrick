@@ -72,6 +72,116 @@ export const mediaSections = {
     ]
 };
 
+// Project data configuration
+export const projectData = {
+    'Présent><Futur': {
+        name: 'Présent><Futur',
+        year: '2024',
+        title: 'Where the Present Meets Possibility',
+        description: 'An immersive installation exploring the intersection of contemporary art and future possibilities, challenging visitors to reimagine their relationship with time and space through interactive digital media.',
+        credits: {
+            'Creative direction': ['Hugo Ganet'],
+            'Design': ['Hugo Ganet', 'Marie Dupont'],
+            'Motion': ['Pierre Martin', 'Sophie Dubois'],
+            'Development': ['Alex Chen']
+        }
+    },
+    'Frac Auvergne': {
+        name: 'Frac Auvergne',
+        year: '2023',
+        title: 'Contemporary Visions',
+        description: 'A comprehensive visual identity and exhibition design for Frac Auvergne, emphasizing the dynamic relationship between regional heritage and contemporary artistic expression.',
+        credits: {
+            'Creative direction': ['Hugo Ganet'],
+            'Design': ['Hugo Ganet', 'Laura Petit'],
+            'Photography': ['Jean Moreau'],
+            'Print production': ['Atelier Graphique']
+        }
+    },
+    'Palais de Tokyo': {
+        name: 'Palais de Tokyo',
+        year: '2023',
+        title: 'Institutional Renaissance',
+        description: 'Complete brand refresh and digital experience design for one of Paris most influential contemporary art institutions, balancing heritage with avant-garde innovation.',
+        credits: {
+            'Creative direction': ['Hugo Ganet'],
+            'Design': ['Hugo Ganet', 'Thomas Blanc'],
+            'Motion': ['Camille Rouge', 'David Noir'],
+            'Web development': ['Tech Studio Paris']
+        }
+    },
+    'Stereolux': {
+        name: 'Stereolux',
+        year: '2022',
+        title: 'Sound & Vision',
+        description: 'Multi-platform identity system for Nantes cultural venue, creating visual harmony between music, digital arts, and live performance through dynamic graphic systems.',
+        credits: {
+            'Creative direction': ['Hugo Ganet'],
+            'Design': ['Hugo Ganet', 'Emma Vert'],
+            'Motion': ['Lucas Jaune'],
+            'Sound design': ['Studio Audio Nantes']
+        }
+    },
+    'Pygmalion': {
+        name: 'Pygmalion',
+        year: '2022',
+        title: 'Metamorphosis',
+        description: 'Brand identity and festival materials for Pygmalion music festival, capturing the transformative power of live music through evolving visual narratives.',
+        credits: {
+            'Creative direction': ['Hugo Ganet'],
+            'Design': ['Hugo Ganet', 'Alice Bleu'],
+            'Illustration': ['Marie Rose', 'Paul Orange'],
+            'Motion': ['Studio Motion Lyon']
+        }
+    },
+    'Pili': {
+        name: 'Pili',
+        year: '2021',
+        title: 'Digital Awakening',
+        description: 'Complete digital identity for emerging tech startup, focusing on clean minimalism and progressive enhancement to communicate innovation and reliability.',
+        credits: {
+            'Creative direction': ['Hugo Ganet'],
+            'Design': ['Hugo Ganet'],
+            'Development': ['DevCorp'],
+            'Strategy': ['Digital Consulting']
+        }
+    }
+};
+
+/**
+ * Get project data for a given section
+ * @param {string} section - The section name
+ * @returns {object|null} Project data object or null if not found
+ */
+export function getProjectData(section) {
+    return projectData[section] || null;
+}
+
+/**
+ * Validate and normalize project data
+ * @param {object} data - Raw project data
+ * @returns {object} Validated project data with defaults
+ */
+export function validateProjectData(data) {
+    if (!data) {
+        return {
+            name: 'Project Name',
+            year: '2024',
+            title: 'Project Title',
+            description: 'Project description will appear here.',
+            credits: {}
+        };
+    }
+
+    return {
+        name: data.name || 'Project Name',
+        year: data.year || '2024',
+        title: data.title || 'Project Title',
+        description: data.description || 'Project description will appear here.',
+        credits: data.credits || {}
+    };
+}
+
 // App configuration
 export const config = {
     mediaPath: 'Medias/',
