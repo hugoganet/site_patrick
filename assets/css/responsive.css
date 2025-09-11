@@ -73,6 +73,7 @@
     /* White zone mobile layout */
     .gallery-white-zone {
         margin: 25px 0 0 0 !important;
+        padding-left: 0 !important;
     }
 
     .white-zone-layout {
@@ -97,13 +98,12 @@
     .white-zone-center {
         max-width: 400px !important;
         width: 100%;
-        margin-left: 0 !important;
     }
 
     /* White zone text styles mobile */
     .white-zone-left,
     .white-zone-center,
-    .white-zone-right {
+    .white-zone-right{
         color: #444 !important;
         font-size: 0.95em !important;
         line-height: 1.1 !important;
@@ -144,11 +144,12 @@
     /* White zone mobile layout - ensure 25px left margin */
     .gallery-white-zone {
         margin: 25px 0 0 0 !important;
+        padding-left: 0 !important;
     }
 
     .white-zone-left,
     .white-zone-center,
-    .white-zone-right {
+    .white-zone-right{
         margin-left: 25px !important;
     }
 }

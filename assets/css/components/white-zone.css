@@ -6,7 +6,8 @@
     background: #fff;
     width: 100%;
     box-sizing: border-box;
-    margin: 25px 0 0 0;
+    margin: 25px 0 0 0 !important;
+    padding-left: 25px !important;
 }
 
 /* White zone layout */
@@ -23,7 +24,7 @@
 /* White zone sections */
 .white-zone-left {
     flex: 0 0 110px;
-    margin-left: 10px;
+    margin-left: 0;
     min-width: 80px;
     max-width: 140px;
     font-family: 'indivisible', Arial, sans-serif;
@@ -111,8 +112,17 @@
     line-height: 1.1 !important;
 }
 
+/* White zone description - inherits from center but can have specific styles */
+.white-zone-description {
+    margin-top: 8px;
+}
+
 /* Desktop adjustments */
 @media (min-width: 801px) {
+    .gallery-white-zone {
+        padding-left: 25px !important;
+    }
+
     .white-zone-center {
         margin-left: 69px !important;
     }
