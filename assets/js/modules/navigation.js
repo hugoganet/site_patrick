@@ -1,7 +1,7 @@
 // Navigation module - handles top bar and work menu
 import { $, $$, debounce } from '../utils/dom.js';
 import { smoothScrollTo, smoothScrollToWithCallback } from '../utils/scroll.js';
-import { config } from '../config.js';
+import { config, mediaSections } from '../config.js';
 
 let workMenuOpen = false;
 let menu, workBtn;
@@ -29,6 +29,7 @@ export function initNavigation() {
     // Set initial state
     closeWorkMenu();
     setWorkMenuStyle();
+    updateWorkButtonText();
 }
 
 /**
@@ -110,6 +111,68 @@ function setWorkMenuStyle() {
 function updateMenuPosition() {
     if (workMenuOpen) {
         setWorkMenuStyle();
+    }
+    updateWorkButtonText();
+}
+
+/**
+ * Get current section based on scroll position
+ */
+function getCurrentSection() {
+    const gallery = $('.gallery');
+    if (!gallery) return 'HOME';
+
+    // Check each section to see which one is currently active
+    const sections = Object.keys(mediaSections);
+    
+    for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        const mediaFiles = mediaSections[section];
+        
+        if (!mediaFiles || mediaFiles.length === 0) continue;
+        
+        // Get first element of section
+        const firstElement = gallery.querySelector(`[data-section="${section}"][data-index="0"]`);
+        if (!firstElement) continue;
+        
+        const firstRect = firstElement.getBoundingClientRect();
+        
+        // If this section's first element is at or near the top
+        if (firstRect.top <= 100) {
+            // Check if next section has started
+            let nextSectionStarted = false;
+            if (i < sections.length - 1) {
+                const nextSection = sections[i + 1];
+                const nextFirst = gallery.querySelector(`[data-section="${nextSection}"][data-index="0"]`);
+                if (nextFirst) {
+                    const nextRect = nextFirst.getBoundingClientRect();
+                    nextSectionStarted = nextRect.top <= 100;
+                }
+            }
+            
+            // If next section hasn't started, this is the current section
+            if (!nextSectionStarted) {
+                return section;
+            }
+        }
+    }
+    
+    return 'HOME';
+}
+
+/**
+ * Update work button text based on current section and viewport
+ */
+function updateWorkButtonText() {
+    if (!workBtn) return;
+    
+    const isMobile = window.innerWidth <= config.mobileBreakpoint;
+    
+    if (isMobile) {
+        const currentSection = getCurrentSection();
+        workBtn.textContent = currentSection === 'HOME' ? 'work' : currentSection;
+    } else {
+        workBtn.textContent = 'work';
     }
 }
 

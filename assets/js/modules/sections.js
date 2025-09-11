@@ -32,6 +32,13 @@ function updateSectionButtons() {
         return;
     }
     
+    // Hide all dynamic section buttons on mobile since project name is shown in work button
+    const isMobile = window.innerWidth <= config.mobileBreakpoint;
+    if (isMobile) {
+        hideAllSectionButtons();
+        return;
+    }
+    
     // Check each section
     Object.keys(mediaSections).forEach(section => {
         if (section === 'HOME') return; // Never show HOME button
