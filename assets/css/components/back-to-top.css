@@ -1,0 +1,83 @@
+/* Back to Top Button CSS */
+
+.back-to-top-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    
+    /* Button styling matching top-btn */
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    font-family: 'indivisible', Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    transition: all 0.3s ease;
+    
+    /* Initially hidden */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(20px);
+}
+
+.back-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.back-to-top-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: translateX(-50%) translateY(-2px);
+}
+
+.back-to-top-arrow {
+    margin-right: 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.back-to-top-btn:hover .back-to-top-arrow {
+    transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .back-to-top-btn {
+        font-size: 1.1rem;
+        padding: 0 20px;
+        height: 45px;
+    }
+    
+    .back-to-top-arrow {
+        font-size: 1.2rem;
+        margin-right: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .back-to-top-btn {
+        font-size: 1rem;
+        padding: 0 18px;
+        height: 40px;
+        bottom: 20px;
+    }
+    
+    .back-to-top-arrow {
+        font-size: 1.1rem;
+        margin-right: 5px;
+    }
+}

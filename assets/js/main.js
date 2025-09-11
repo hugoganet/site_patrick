@@ -3,6 +3,7 @@ import { initNavigation } from './modules/navigation.js';
 import { initGallery } from './modules/gallery.js';
 import { initModal } from './modules/modal.js';
 import { initSectionButtons } from './modules/sections.js';
+import { initBackToTop } from './modules/back-to-top.js';
 
 /**
  * Initialize application
@@ -26,6 +27,7 @@ function init() {
         initGallery();
         initModal();
         initSectionButtons();
+        initBackToTop();
         
         console.log('PPS Website initialized successfully');
     } catch (error) {
