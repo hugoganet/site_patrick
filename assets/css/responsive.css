@@ -1,7 +1,7 @@
 /* Responsive CSS - All media queries */
 
-/* Tablet styles (800px and below) */
-@media (max-width: 800px) {
+/* Tablet styles (900px and below) */
+@media (max-width: 900px) {
     /* Typography */
     .container h1,
     .container h2 {
