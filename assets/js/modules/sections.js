@@ -1,5 +1,5 @@
 // Sections module - handles dynamic section buttons
-import { $, $$, createElement, debounce } from '../utils/dom.js';
+import { $, $$, createElement, debounce, throttle } from '../utils/dom.js';
 import { isScrolling } from '../utils/scroll.js';
 import { mediaSections, config } from '../config.js';
 import { scrollToSection } from './navigation.js';
@@ -11,10 +11,10 @@ const activeSectionButtons = new Map();
  * Initialize section buttons
  */
 export function initSectionButtons() {
-    // Set up scroll and resize listeners
-    window.addEventListener('scroll', debounce(updateSectionButtons, config.debounceDelay));
+    // Set up scroll with throttle for real-time updates, resize with debounce
+    window.addEventListener('scroll', throttle(updateSectionButtons, config.throttleDelay));
     window.addEventListener('resize', debounce(updateSectionButtons, config.debounceDelay));
-    
+
     // Initial update
     setTimeout(updateSectionButtons, 200);
 }

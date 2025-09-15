@@ -59,6 +59,21 @@ export function debounce(func, wait) {
 }
 
 /**
+ * Throttle function for performance
+ * Ensures function is called at most once per specified time period
+ */
+export function throttle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
+/**
  * Add multiple event listeners
  */
 export function addEventListeners(element, events, handler) {

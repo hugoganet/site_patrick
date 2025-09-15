@@ -1,5 +1,5 @@
 // Back to Top module - handles back to top button visibility and functionality
-import { $, debounce } from '../utils/dom.js';
+import { $, throttle } from '../utils/dom.js';
 import { smoothScrollToWithCallback } from '../utils/scroll.js';
 import { config } from '../config.js';
 
@@ -11,15 +11,15 @@ let isVisible = false;
  */
 export function initBackToTop() {
     backToTopBtn = $('#back-to-top');
-    
+
     if (!backToTopBtn) {
         console.warn('Back to top button not found');
         return;
     }
-    
+
     // Set up event listeners
     backToTopBtn.addEventListener('click', handleBackToTopClick);
-    window.addEventListener('scroll', debounce(handleScroll, config.debounceDelay));
+    window.addEventListener('scroll', throttle(handleScroll, config.throttleDelay));
     
     // Initial state check
     handleScroll();

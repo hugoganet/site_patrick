@@ -1,5 +1,5 @@
 // Navigation module - handles top bar and work menu
-import { $, $$, debounce } from '../utils/dom.js';
+import { $, $$, debounce, throttle } from '../utils/dom.js';
 import { smoothScrollTo, smoothScrollToWithCallback } from '../utils/scroll.js';
 import { config, mediaSections } from '../config.js';
 
@@ -12,13 +12,13 @@ let menu, workBtn;
 export function initNavigation() {
     menu = $('#work-menu');
     workBtn = $('#work-btn');
-    
+
     if (!menu || !workBtn) return;
-    
+
     // Set up event listeners
     workBtn.addEventListener('click', handleWorkButtonClick);
     window.addEventListener('resize', debounce(updateMenuPosition, config.debounceDelay));
-    window.addEventListener('scroll', debounce(updateMenuPosition, config.debounceDelay));
+    window.addEventListener('scroll', throttle(updateMenuPosition, config.throttleDelay));
     
     // Initialize warans button (scroll to top)
     initWaransButton();

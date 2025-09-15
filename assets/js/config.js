@@ -188,5 +188,6 @@ export const config = {
     scrollBehavior: 'smooth',
     lazyLoadOffset: '200px',
     debounceDelay: 100,
+    throttleDelay: 16, // 60fps for smooth scroll updates
     mobileBreakpoint: 900
 };
