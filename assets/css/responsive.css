@@ -31,12 +31,11 @@
         margin-top: 120px;
     }
 
-    /* Work button positioning */
+    /* Work button positioning - mobile override */
     .top-btn.work {
-        position: static;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+        margin-left: 0; /* Reset desktop offset */
+        z-index: 9; /* Below .top-bar but above page content */
+        mix-blend-mode: normal; /* No blend effect */
     }
 
     /* Work menu mobile layout */
