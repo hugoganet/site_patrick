@@ -29,6 +29,7 @@
 @media (max-width: 900px) {
     .top-bar {
         padding: 0 var(--mobile-margin);
+		top: var(--mobile-margin) !important;
     }
 }
 

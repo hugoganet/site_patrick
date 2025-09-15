@@ -6,8 +6,8 @@
     background: #fff;
     width: 100%;
     box-sizing: border-box;
-    margin: 25px 0 25px 0 !important;
-    padding-left: 25px !important;
+    margin: var(--margin) 0 var(--margin) 0 !important;
+    padding-left: var(--margin) !important;
 }
 
 /* White zone layout */
