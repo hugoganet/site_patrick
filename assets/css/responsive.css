@@ -77,7 +77,9 @@
 
     /* White zone mobile layout */
     .gallery-white-zone {
+		width: auto !important;
         padding-left: 0 !important;
+		margin-right: var(--mobile-margin) !important;
     }
 
     .white-zone-layout {
@@ -91,10 +93,10 @@
     .white-zone-center,
     .white-zone-right {
         display: block !important;
-        width: 100% !important;
+        width: auto !important;
         margin: 0 !important;
         padding: 0 !important;
-        margin-left: var(--mobile-margin) !important;
+        margin-left: 0 !important;
         margin-right: 0 !important;
         margin-bottom: var(--mobile-margin) !important;
         border-bottom: none !important;
@@ -172,6 +174,7 @@
     .white-zone-center,
     .white-zone-right{
         margin-left: var(--mobile-margin) !important;
+		margin-right: var(--mobile-margin) !important;
     }
 }
 
