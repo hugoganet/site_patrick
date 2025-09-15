@@ -138,7 +138,7 @@ function positionSectionButton(btn) {
         Object.assign(btn.style, {
             position: 'fixed',
             left: (workRect.left + workRect.width / 2) + 'px',
-            top: (workRect.bottom + 2) + 'px',
+            top: (workRect.bottom + 4) + 'px',
             transform: 'translateX(-50%)',
             marginLeft: '2px',
             marginRight: '2px'
