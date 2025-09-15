@@ -58,7 +58,6 @@
         flex-direction: row !important;
         justify-content: center !important;
         align-items: flex-start !important;
-        gap: 4px 4px !important;
         z-index: 100 !important;
         padding: 0 2px !important;
     }
