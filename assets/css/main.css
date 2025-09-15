@@ -8,6 +8,11 @@
 @import 'components/back-to-top.css';
 @import 'responsive.css';
 
+/* CSS Variables */
+:root {
+    --mobile-margin: 15px;
+}
+
 /* Base styles */
 html,
 body {

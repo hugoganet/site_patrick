@@ -139,6 +139,18 @@
 	}
 }
 
+/* Mobile adjustments */
+@media (max-width: 900px) {
+    .gallery-white-zone {
+        margin: var(--mobile-margin) 0 var(--mobile-margin) 0 !important;
+        padding-left: var(--mobile-margin) !important;
+    }
+
+    .white-zone-layout {
+        gap: var(--mobile-margin);
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .white-zone-layout {

@@ -25,6 +25,13 @@
     }
 }
 
+/* Mobile padding adjustments */
+@media (max-width: 900px) {
+    .top-bar {
+        padding: 0 var(--mobile-margin);
+    }
+}
+
 /* Top buttons */
 .top-btn {
     mix-blend-mode: normal;

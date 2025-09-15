@@ -83,7 +83,7 @@
     .white-zone-layout {
         display: block !important;
         flex-direction: column;
-        gap: 25px;
+        gap: var(--mobile-margin);
         margin-left: 0;
     }
 
@@ -94,9 +94,9 @@
         width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
-        margin-left: 25px !important;
+        margin-left: var(--mobile-margin) !important;
         margin-right: 0 !important;
-        margin-bottom: 25px !important;
+        margin-bottom: var(--mobile-margin) !important;
         border-bottom: none !important;
     }
     
@@ -171,7 +171,7 @@
     .white-zone-left,
     .white-zone-center,
     .white-zone-right{
-        margin-left: 25px !important;
+        margin-left: var(--mobile-margin) !important;
     }
 }
 
