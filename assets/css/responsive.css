@@ -66,6 +66,11 @@
         display: flex !important;
     }
 
+    /* Hide section buttons when the work menu is open on mobile */
+    body:has(.work-menu.menu-open) [id^="sectionBtn-"] {
+        display: none !important;
+    }
+
     /* Section buttons */
     [id^="sectionBtn-"] {
         white-space: nowrap !important;
