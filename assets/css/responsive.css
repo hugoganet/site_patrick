@@ -31,6 +31,11 @@
         margin-top: 120px;
     }
 
+    /* Top bar buttons equal width on mobile */
+	.top-btn {
+        min-width: 116px;
+    }
+
     /* Work button positioning */
     .top-btn.work {
         position: static;

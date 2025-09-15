@@ -169,8 +169,9 @@ function updateWorkButtonText() {
     const isMobile = window.innerWidth <= config.mobileBreakpoint;
     
     if (isMobile) {
-        const currentSection = getCurrentSection();
-        workBtn.textContent = currentSection === 'HOME' ? 'work' : currentSection;
+        // const currentSection = getCurrentSection();
+        // workBtn.textContent = currentSection === 'HOME' ? 'work' : currentSection;
+		workBtn.textContent = 'work';
     } else {
         workBtn.textContent = 'work';
     }
