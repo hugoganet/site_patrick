@@ -51,15 +51,10 @@
     color: #FFFFFF;
 }
 
-/* Work button specific positioning - desktop */
+/* Work button specific positioning */
 .top-btn.work {
-    position: fixed;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: -640px; /* Offset to simulate left: 220px relative to centered container */
-    z-index: 10;
-    mix-blend-mode: exclusion; /* Blend effect on desktop */
+    position: absolute;
+    left: 220px;
 }
 
 /* Negatif effect for work button when menu is open */
