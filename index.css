@@ -261,7 +261,7 @@ h2 {
 	.white-zone-center {
 		max-width: 400px !important;
 		width: 100%;
-		margin-left: var(--margin) !important;
+		margin-left: var(--desktop-margin) !important;
 	}
 
 	.container {
@@ -397,7 +397,7 @@ h2 {
 	width: 100%;
 	box-sizing: border-box;
 	padding: 0 0px;
-	margin: var(--margin) 0 0 0 !important;
+	margin: var(--desktop-margin) 0 0 0 !important;
 	/* supprime le centrage vertical */
 }
 

@@ -1,6 +1,7 @@
 /* Main CSS - Base styles and layout */
 
-/* Import component styles */
+/* Import tokens then component styles */
+@import 'tokens.css';
 @import 'components/navigation.css';
 @import 'components/gallery.css';
 @import 'components/modal.css';
@@ -8,22 +9,16 @@
 @import 'components/back-to-top.css';
 @import 'responsive.css';
 
-/* CSS Variables */
-:root {
-    --mobile-margin: 15px;
-	--margin: 25px;
-}
-
 /* Base styles */
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #fff;
-    color: #C8C8C8;
-    font-family: 'indivisible', Arial, sans-serif;
-    font-weight: 400;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-weight: var(--weight-regular);
     min-height: 100vh;
     box-sizing: border-box;
 }
@@ -31,20 +26,20 @@ body {
 /* Typography */
 h1,
 h2 {
-    font-size: 70pt;
-    font-weight: 550;
-    line-height: 70pt;
+    font-size: var(--text-title-xl);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-title-xl);
     margin-bottom: 24px;
-    font-family: 'indivisible-light', 'indivisible', Arial, sans-serif;
-    color: #C8C8C8;
+    font-family: var(--font-sans-alt);
+    color: var(--color-text);
 }
 
 /* Container */
 .container {
-    max-width: 1330px;
-    margin-left: 35px;
-    margin-right: 35px;
-    margin-top: 120px;
+    max-width: var(--container-max);
+    margin-left: var(--container-padding-x);
+    margin-right: var(--container-padding-x);
+    margin-top: var(--page-margin-top);
     margin-bottom: 0;
     width: auto;
     padding: 0;
@@ -53,12 +48,12 @@ h2 {
 
 /* Description text */
 .desc {
-    font-size: 1.75rem;
-    line-height: 1.2;
+    font-size: var(--text-body-lg);
+    line-height: var(--leading-base);
     margin-bottom: 32px;
-    color: #C8C8C8;
-    font-family: 'indivisible', Arial, sans-serif;
-    font-weight: 200;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-weight: var(--weight-extralight);
     max-width: 1300px;
     width: 100%;
 }
@@ -75,23 +70,23 @@ h2 {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1.75rem;
-    line-height: 1.2;
-    font-family: 'indivisible', Arial, sans-serif;
-    font-weight: 200;
-    color: #C8C8C8;
+    font-size: var(--text-body-lg);
+    line-height: var(--leading-base);
+    font-family: var(--font-sans);
+    font-weight: var(--weight-extralight);
+    color: var(--color-text);
     columns: 4;
     column-gap: 32px;
 }
 
 .services li {
-    color: #C8C8C8;
+    color: var(--color-text);
 }
 
 /* About section */
 .about {
     margin-bottom: 48px;
-    color: #C8C8C8;
+    color: var(--color-text);
     padding-left: 35px;
     padding-right: 35px;
     box-sizing: border-box;

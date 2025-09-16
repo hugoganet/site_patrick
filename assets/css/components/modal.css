@@ -8,9 +8,9 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #000;
-    color: #C8C8C8;
-    z-index: 9999;
+    background: var(--color-inverse-bg);
+    color: var(--color-text);
+    z-index: var(--z-modal);
     overflow: auto;
 }
 
@@ -26,34 +26,42 @@
 
 /* Modal specific container styles */
 #info-modal .container {
-    max-width: 1330px;
-    margin-left: 35px;
-    margin-right: 35px;
-    margin-top: 120px;
+    max-width: var(--container-max);
+    margin-left: var(--desktop-margin);
+    margin-right: var(--desktop-margin);
+    margin-top: var(--page-margin-top);
     margin-bottom: 0;
     width: auto;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Info modal responsive margins */
+@media (max-width: 900px) {
+    #info-modal .container {
+        margin-left: var(--mobile-margin);
+        margin-right: var(--mobile-margin);
+    }
+}
+
 /* Modal typography */
 #info-modal h1,
 #info-modal h2 {
-    font-size: 70pt;
-    font-weight: 550;
-    line-height: 70pt;
+    font-size: var(--text-title-xl);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-title-xl);
     margin-bottom: 24px;
-    font-family: 'indivisible-light', 'indivisible', Arial, sans-serif;
-    color: #C8C8C8;
+    font-family: var(--font-sans-alt);
+    color: var(--color-text);
 }
 
 #info-modal .desc {
-    font-size: 1.75rem;
-    line-height: 1.2;
+    font-size: var(--text-body-lg);
+    line-height: var(--leading-base);
     margin-bottom: 32px;
-    color: #C8C8C8;
-    font-family: 'indivisible', Arial, sans-serif;
-    font-weight: 200;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-weight: var(--weight-extralight);
     max-width: 1300px;
     width: 100%;
 }
