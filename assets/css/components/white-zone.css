@@ -121,11 +121,11 @@
 /* Desktop adjustments */
 @media (min-width: 901px) {
     .gallery-white-zone {
-        padding-left: 25px !important;
+        padding-left: var(--margin) !important;
     }
 
     .white-zone-center {
-        margin-left: 69px !important;
+        margin-left: 61px !important;
     }
 
     .white-zone-right {
