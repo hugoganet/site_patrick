@@ -29,7 +29,7 @@ function init() {
         initSectionButtons();
         initBackToTop();
         
-        console.log('PPS Website initialized successfully');
+        console.log('WARANS Website initialized successfully');
     } catch (error) {
         console.error('Error initializing application:', error);
     }

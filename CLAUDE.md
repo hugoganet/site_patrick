@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-PPS Studio website is a modern portfolio website built with vanilla HTML5, CSS3, and ES6+ JavaScript. The project uses a modular architecture with ES6 modules and no build process - all code runs directly in the browser.
+Warans Studio website is a modern portfolio website built with vanilla HTML5, CSS3, and ES6+ JavaScript. The project uses a modular architecture with ES6 modules and no build process - all code runs directly in the browser.
 
 ## Development Commands
 
