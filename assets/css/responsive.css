@@ -172,13 +172,6 @@
     .gallery-white-zone {
         padding-left: 0 !important;
     }
-
-    .white-zone-left,
-    .white-zone-center,
-    .white-zone-right{
-        margin-left: var(--mobile-margin) !important;
-		margin-right: var(--mobile-margin) !important;
-    }
 }
 
 /* Modal responsive styles */
