@@ -26,11 +26,27 @@ php -S localhost:8000
 - No compilation, bundling, or preprocessing required
 - All JavaScript modules are loaded natively by the browser
 
+### Deployment
+The site is deployed on **Vercel** with automatic deployments:
+```bash
+# Deploy to production
+vercel --prod
+
+# Local development
+vercel dev
+```
+
+**Live URLs:**
+- **Primary**: https://warans.fr
+- **Secondary**: https://warans.eu
+- **Vercel Default**: https://waranswebsite-30qz73yhf-hugos-projects-4f489c1b.vercel.app
+
 ## Architecture Overview
 
 ### Core Structure
 ```
 ├── index.html              # Main entry point
+├── vercel.json            # Vercel deployment configuration
 ├── assets/
 │   ├── css/
 │   │   ├── main.css        # Central stylesheet with imports
@@ -154,6 +170,14 @@ The gallery module (`assets/js/modules/gallery.js`) handles:
 - **Media Migration**: Transitioned from local files to Gumlet CDN
 - **JSON Configuration**: Projects now configured via JSON files instead of hardcoded JS
 - **Performance**: Implemented scroll throttling for real-time updates
+- **Deployment**: Deployed to Vercel with custom domain configuration
+
+### Deployment Configuration
+- **Vercel Setup**: Added `vercel.json` with static site configuration
+- **Custom Domains**: Configured both warans.fr and warans.eu domains
+- **DNS Configuration**: Set up AlwaysData DNS records pointing to Vercel
+- **SSL Certificates**: Automatic HTTPS with Vercel's SSL
+- **Global CDN**: Vercel's edge network for fast worldwide delivery
 
 ### Removed Features
 - Deleted legacy `Medias_old/` directory with unoptimized media
@@ -164,7 +188,15 @@ The gallery module (`assets/js/modules/gallery.js`) handles:
 - **Back-to-Top Button**: Fixed visibility logic preventing button from showing
   - Removed `height: 100%` CSS constraint that limited document height calculation
   - Added scroll threshold (100px) to prevent premature visibility at page top
+  - Improved scroll position calculation logic in `assets/js/modules/back-to-top.js:10-20`
   - Button now correctly appears only when user scrolls down AND approaches bottom
+- **Responsive Gallery**: Improved media responsiveness and aspect ratios
+  - Enhanced CSS Grid layout for better mobile/desktop adaptation
+  - Fixed video aspect ratio handling across different screen sizes
+  - Updated JSON project files with correct aspect ratio specifications
+- **Mobile Optimizations**: Removed redundant CSS overrides
+  - Cleaned up duplicate margin declarations in responsive.css
+  - Streamlined mobile-specific styling rules
 - Fixed white zone responsive layout issues
 - Corrected mobile/desktop margin calculations
 - Fixed section button visibility with open work menu
@@ -174,6 +206,8 @@ The gallery module (`assets/js/modules/gallery.js`) handles:
 - ✅ Core gallery system migrated to JSON/Gumlet architecture
 - ✅ Responsive design optimized for mobile/desktop
 - ✅ Back-to-top navigation functionality restored
+- ✅ Production deployment on Vercel with custom domains
+- ✅ DNS configuration and SSL certificates working
 - 🔄 Additional UI/UX enhancements in progress
 
 ## Browser Compatibility
