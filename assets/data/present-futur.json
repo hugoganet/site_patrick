@@ -10,7 +10,7 @@
   ],
   "medias": [
 				{ "type": "image", "url": "https://warans.gumlet.io/01_01-PF-Image01.webp" },
-				{ "type": "video", "id": "68c98eaeb0773038fc4d6261" },
+				{ "type": "video", "id": "68c98eaeb0773038fc4d6261", "ratio": "16/9" },
 				{ "type": "image", "url": "https://warans.gumlet.io/03_01-PF-Image02.webp" },
 				{ "type": "video", "id": "68c98eaeb0773038fc4d6266" },
 				{ "type": "image", "url": "https://warans.gumlet.io/05_01-PF-Image03.webp" },

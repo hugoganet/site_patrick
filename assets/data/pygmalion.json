@@ -15,10 +15,10 @@
 				{ "type": "video", "id": "68c98f07d32bbf54d8631c49" },
 				{ "type": "image", "url": "https://warans.gumlet.io/05_05-PYG-Image03.webp" },
 				{ "type": "image", "url": "https://warans.gumlet.io/06_05-PYG-Image04.webp" },
-				{ "type": "video", "id": "68c98f07b19d10518c4a55cd" },
+				{ "type": "video", "id": "68c98f07b19d10518c4a55cd", "ratio": "281/100" },
 				{ "type": "image", "url": "https://warans.gumlet.io/08_05-PYG-Image05.webp" },
 				{ "type": "image", "url": "https://warans.gumlet.io/09_05-PYG-Image06.webp" },
 				{ "type": "video", "id": "68c98f07b0773038fc4d6cb8" },
-				{ "type": "video", "id": "68c98f07b0773038fc4d6cbf" }
+				{ "type": "video", "id": "68c98f07b0773038fc4d6cbf", "ratio": "16/9" }
 			]
 }

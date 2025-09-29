@@ -17,7 +17,7 @@
 	{ "type": "video", "id": "68c9906ab19d10518c4a6a5a" },
 	{ "type": "image", "url": "https://warans.gumlet.io/07_06-Pili-Image05.webp" },
 	{ "type": "image", "url": "https://warans.gumlet.io/08_06-Pili-Image06.webp" },
-	{ "type": "video", "id": "68c9906bb0773038fc4d7e78" },
+	{ "type": "video", "id": "68c9906bb0773038fc4d7e78", "ratio": "256/100" },
 	{ "type": "image", "url": "https://warans.gumlet.io/10_06-Pili-Image07.webp" },
 	{ "type": "image", "url": "https://warans.gumlet.io/11_06-Pili-Image08.webp" },
 	{ "type": "image", "url": "https://warans.gumlet.io/12_06-Pili-Image08.webp" },

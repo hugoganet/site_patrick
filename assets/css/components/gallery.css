@@ -27,6 +27,7 @@
     border: 0 !important;
     border-radius: 0 !important;
     box-sizing: border-box !important;
+	border: 0 !important;
 }
 
 /* Defensive: if any parent sets a gap, neutralize it here */
@@ -36,5 +37,23 @@
    You can override per media via JSON by providing `"ratio": "16/9"` (or any ratio),
    which sets an inline style and will take precedence over this rule. */
 .gallery iframe {
-	aspect-ratio: 34 / 21 !important;
+	aspect-ratio: 34 / 21; /* default 34:21 ratio */
+}
+
+@media (max-width: 1300px) {
+
+	.gallery img,
+	.gallery iframe,
+	.gallery video,
+	.gallery .gumlet-lazy {
+		width: 100% !important;
+		min-width: 0 !important;
+		height: auto !important;
+		display: block !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		border-radius: 0 !important;
+		box-sizing: border-box !important;
+		/* aspect-ratio supprimé */
+	}
 }

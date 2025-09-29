@@ -113,12 +113,7 @@ function renderMediaEl(project, media, idx) {
             allowFullscreen: true,
             'data-section': project.title,
             'data-index': idx,
-            style: {
-                display: 'block',
-                width: '100%',
-                height: 'auto',
-                ...(media.ratio ? { aspectRatio: media.ratio } : {})
-            }
+            style: `display: block; width: 100%; height: auto; ${media.ratio ? `aspect-ratio: ${media.ratio};` : ''}`
         });
     }
 
