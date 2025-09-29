@@ -146,7 +146,7 @@ The gallery module (`assets/js/modules/gallery.js`) handles:
 - Check JSON data structure when modifying gallery
 - Test Gumlet embed integration
 
-## Recent Updates (Updated: 2025-01-29)
+## Recent Updates (Updated: 2025-09-29)
 
 ### Major Changes
 - **Rebrand**: Complete rebrand from PPS Studio to Warans Studio
@@ -160,11 +160,21 @@ The gallery module (`assets/js/modules/gallery.js`) handles:
 - Removed `KIRBY_MIGRATION_PLAN.md` and `codebase_analysis.md`
 - Removed `compress-videos.sh` script (now handled by Gumlet)
 
-### Bug Fixes
+### Recent Bug Fixes (Latest)
+- **Back-to-Top Button**: Fixed visibility logic preventing button from showing
+  - Removed `height: 100%` CSS constraint that limited document height calculation
+  - Added scroll threshold (100px) to prevent premature visibility at page top
+  - Button now correctly appears only when user scrolls down AND approaches bottom
 - Fixed white zone responsive layout issues
 - Corrected mobile/desktop margin calculations
 - Fixed section button visibility with open work menu
 - Improved navigation button spacing and positioning
+
+### Current Development Status
+- ✅ Core gallery system migrated to JSON/Gumlet architecture
+- ✅ Responsive design optimized for mobile/desktop
+- ✅ Back-to-top navigation functionality restored
+- 🔄 Additional UI/UX enhancements in progress
 
 ## Browser Compatibility
 - Requires ES6 module support

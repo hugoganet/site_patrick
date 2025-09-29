@@ -48,11 +48,13 @@ function handleScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
-    
-    // Show button when user is near bottom (within 200px of bottom)
+
+    // Show button when user has scrolled down AND is near bottom (within 200px of bottom)
     const distanceFromBottom = documentHeight - (scrollTop + windowHeight);
-    const shouldBeVisible = distanceFromBottom <= 200;
-    
+    const hasScrolled = scrollTop > 100; // Must scroll at least 100px from top
+    const isNearBottom = distanceFromBottom <= 200;
+    const shouldBeVisible = hasScrolled && isNearBottom;
+
     if (shouldBeVisible && !isVisible) {
         showButton();
     } else if (!shouldBeVisible && isVisible) {
