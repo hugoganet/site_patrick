@@ -1,0 +1,21 @@
+{
+  "title": "Frac Auvergne",
+  "slug": "frac-auvergne",
+  "year": "2023",
+  "description": "Contemporary Visions",
+  "credits": [
+    { "role": "Creative direction", "names": ["Name Surname"] },
+    { "role": "Design", "names": ["Name Surname", "Name Surname"] },
+    { "role": "Motion", "names": ["Name Surname"] }
+  ],
+  "medias": [
+        { "type": "image", "url": "https://warans.gumlet.io/01_02-FRAC-Image01.webp" },
+        { "type": "video", "id": "68c98ec3d32bbf54d8631738" },
+        { "type": "video", "id": "68cecc0c2b33c1c857682e34" },
+        { "type": "image", "url": "https://warans.gumlet.io/03_02-FRAC-Image02.webp" },
+        { "type": "image", "url": "https://warans.gumlet.io/04_02-FRAC-Image03.webp" },
+        { "type": "video", "id": "68c98ec3d32bbf54d8631736" },
+        { "type": "image", "url": "https://warans.gumlet.io/06_02-FRAC-Image04.webp" },
+        { "type": "video", "id": "68c98ec3b19d10518c4a525a" }
+			]
+}

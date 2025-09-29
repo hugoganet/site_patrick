@@ -1,5 +1,7 @@
 // Media sections configuration
-export const mediaSections = {
+// IMPORTANT: This is now mutable and will be replaced at runtime
+// by the gallery JSON loader so navigation/section buttons can use it.
+export let mediaSections = {
     'HOME': ['00-HOME/00_ANIM_home_HD.mp4'],
     'Présent><Futur': [
         '01-PF/01_01-PF-Image01.webp',
@@ -71,6 +73,22 @@ export const mediaSections = {
         '06-Pili/13_06-Pili-Image10.webp'
     ]
 };
+
+/**
+ * Replace media sections map at runtime.
+ * This ensures modules that import { mediaSections } see the updated content,
+ * because ES module bindings are live for exported variables from the same module.
+ *
+ * Example shape:
+ * {
+ *   'HOME': [0,0,0],
+ *   'Présent><Futur': [0,0,0,0],
+ *   ...
+ * }
+ */
+export function setMediaSections(newSections) {
+    mediaSections = newSections || {};
+}
 
 // Project data configuration
 export const projectData = {

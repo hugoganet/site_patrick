@@ -21,6 +21,7 @@ body {
     font-weight: var(--weight-regular);
     min-height: 100vh;
     box-sizing: border-box;
+    overflow-x: hidden; /* prevent horizontal scroll with full-bleed media */
 }
 
 /* Typography */

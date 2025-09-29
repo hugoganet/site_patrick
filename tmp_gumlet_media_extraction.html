@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>PPS Studio — Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.typekit.net/cei1dna.css">
+	<!-- Gumlet Player JS -->
+	<script src="https://cdn.gumlet.com/player/gumlet-player.min.js"></script>
+	<!-- Gumlet Image Optimizer -->
+	<script type="text/javascript">
+		window.GUMLET_CONFIG = {
+			hosts: [{
+				current: "https://pps.paris/WaRanS/IMAGES",
+				gumlet: "warans.gumlet.io"
+			}],
+			lazy_load: true
+		};
+		(function () { d = document; s = d.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/gumlet.js@2.2/dist/gumlet.min.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+	</script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		/* Effet négatif pour le bouton work */
+		.top-btn.work.negatif {
+			filter: invert(1) grayscale(1) contrast(2);
+			background: #111;
+			color: #fff;
+		}
+
+		/* Updated styles for full-width responsive images */
+		.gallery-container {
+			width: 100%;
+			overflow-x: hidden;
+			/* Disable horizontal scrolling */
+		}
+
+		.gallery img,
+		.gallery video {
+			display: block;
+			/* Make elements block-level */
+			width: 100%;
+			/* Adjust width to be fully responsive */
+			height: auto;
+			/* Maintain aspect ratio */
+			margin: 0;
+			/* Remove margins */
+			width: 100% !important;
+			height: auto !important;
+			display: block !important;
+			margin: 0 !important;
+			border-radius: 0 !important;
+			box-sizing: border-box !important;
+			/* aspect-ratio supprimé */
+			border-radius: 0;
+			/* Remove rounded corners */
+		}
+
+		.gallery img,
+		.gallery .gumlet-lazy {
+			display: block !important;
+			width: 100% !important;
+			margin: 0 !important;
+			border-radius: 0 !important;
+			padding: 0 !important;
+		}
+
+		.gallery>* {
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background: #fff;
+			color: #C8C8C8;
+			font-family: 'indivisible', Arial, sans-serif;
+			font-weight: 400;
+			min-height: 100vh;
+			box-sizing: border-box;
+		}
+
+		.top-bar {
+			mix-blend-mode: exclusion;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: fixed;
+			top: 25px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 1920px;
+			max-width: 100vw;
+			padding: 0;
+			z-index: 10;
+			box-sizing: border-box;
+		}
+
+		@media (max-width: 1920px) {
+			.top-bar {
+				font-weight: 100;
+				padding: 0 25px;
+				box-sizing: border-box;
+			}
+		}
+
+		.top-btn {
+			mix-blend-mode: normal;
+			border: none;
+			border-radius: 25px;
+			height: 50px;
+			width: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 24px;
+			font-size: 1.2rem;
+			font-weight: 600;
+			cursor: pointer;
+			letter-spacing: 0.01em;
+			font-family: 'indivisible', Arial, sans-serif;
+			background: #fff;
+			color: #111;
+			transition: background 0.2s, color 0.2s, mix-blend-mode 0.2s;
+		}
+
+		.top-btn:hover {
+			background: #000000;
+			color: #FFFFFF;
+
+		}
+
+		.top-btn.work {
+			position: absolute;
+			left: 346px;
+			/* aucun mix-blend-mode ici */
+		}
+
+		@media (max-width: 800px) {
+			[id^="sectionBtn-"] {
+				white-space: nowrap !important;
+				overflow: hidden !important;
+				text-overflow: ellipsis !important;
+				max-width: 90vw !important;
+			}
+
+			/* Fusion des 3 blocs en un seul sur mobile */
+			.white-zone-layout {
+				display: block !important;
+			}
+
+			.white-zone-left,
+			.white-zone-center,
+			.white-zone-right {
+				display: block !important;
+				width: 100% !important;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+
+			.work-menu {
+				position: fixed !important;
+				top: 79px !important;
+				left: 0 !important;
+				width: 100vw !important;
+				margin-top: 0 !important;
+				border-radius: 0 !important;
+				box-sizing: border-box !important;
+				display: none !important;
+				flex-wrap: wrap !important;
+				flex-direction: row !important;
+				justify-content: center !important;
+				align-items: flex-start !important;
+				gap: 4px 4px !important;
+				z-index: 100 !important;
+				padding: 0 2px !important;
+			}
+
+			.work-menu.menu-open {
+				display: flex !important;
+			}
+
+			.top-btn.work {
+				position: static;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+		}
+
+		.container {
+			max-width: 1330px;
+			margin-left: 35px;
+			margin-right: 35px;
+			margin-top: 120px;
+			margin-bottom: 0;
+			width: auto;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		h1,
+		h2 {
+			font-size: 70pt;
+			font-weight: 550;
+			line-height: 70pt;
+			margin-bottom: 24px;
+			font-family: 'indivisible-light', 'indivisible', Arial, sans-serif;
+			color: #C8C8C8;
+		}
+
+		.desc {
+			font-size: 1.75rem;
+			line-height: 1.2;
+			margin-bottom: 32px;
+			color: #C8C8C8;
+			font-family: 'indivisible', Arial, sans-serif;
+			font-weight: 200;
+			width: 100%;
+		}
+
+		.services {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 24px;
+			margin-bottom: 48px;
+		}
+
+		.services ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			font-size: 1.75rem;
+			line-height: 1.2;
+			font-family: 'indivisible', Arial, sans-serif;
+			font-weight: 200;
+			color: #C8C8C8;
+			columns: 4;
+			column-gap: 32px;
+		}
+
+		.services li {
+			color: #C8C8C8;
+		}
+
+		.about {
+			margin-bottom: 48px;
+			color: #C8C8C8;
+			padding-left: 35px;
+			padding-right: 35px;
+			box-sizing: border-box;
+		}
+
+		@media (max-width: 800px) {
+			.white-zone-center {
+				max-width: 400px !important;
+				width: 100%;
+			}
+
+			.container {
+				margin-top: 120px;
+			}
+
+			.container h1,
+			.container h2 {
+				font-size: 42pt;
+				line-height: 45pt;
+			}
+
+			.container .desc {
+				font-size: 1.4rem;
+				letter-spacing: 0.04em;
+				line-height: 1.3;
+			}
+
+			.container .services ul {
+				font-size: 1.4rem;
+				letter-spacing: 0.04em;
+				line-height: 1.3;
+			}
+
+			.services ul {
+				columns: 4;
+				column-gap: 24px;
+			}
+		}
+
+		@media (max-width: 600px) {
+
+			.container h1,
+			.container h2 {
+				font-size: 28pt;
+				line-height: 28pt;
+			}
+
+			.container .desc,
+			.container .services ul {
+				font-size: 1rem;
+			}
+
+			.services ul {
+				columns: 2;
+			}
+		}
+
+		.gallery-container {
+			width: 100%;
+			overflow-x: hidden;
+			/* Disable horizontal scrolling */
+			/* Optionally keep min-height, margin, padding, box-sizing, position, z-index, overflow-y if needed elsewhere */
+		}
+
+		.gallery {
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			/* Aligne les éléments en haut */
+			justify-content: flex-start;
+			gap: 0;
+		}
+
+		.work-menu {
+			position: fixed;
+			left: 0;
+			top: 79px;
+			width: 100vw;
+			margin-top: 0;
+			border-radius: 0;
+			box-sizing: border-box;
+			z-index: 100;
+
+			.work-menu {
+				position: fixed !important;
+				left: 0 !important;
+				top: 25px !important;
+				width: 100vw !important;
+				margin-top: 0 !important;
+				border-radius: 0 !important;
+				box-sizing: border-box !important;
+				z-index: 100 !important;
+			}
+
+			display: none;
+			flex-direction: column;
+			align-items: flex-start;
+			z-index: 100;
+		}
+
+		.work-menu .top-btn {
+			mix-blend-mode: normal !important;
+			margin-bottom: 4px;
+			margin-left: 0;
+			margin-right: 0;
+			min-width: 0;
+			height: 50px;
+			border-radius: 25px;
+			font-size: 1.2rem;
+			font-weight: 600;
+			font-family: 'indivisible', Arial, sans-serif;
+			background: #fff;
+			color: #111;
+			border: none;
+			cursor: pointer;
+			transition: background 0.2s, color 0.2s, mix-blend-mode 0.2s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 24px;
+			width: auto;
+		}
+
+		.work-menu .top-btn:last-child {
+			margin-bottom: 0;
+		}
+
+		.work-menu .top-btn:hover {
+			background: #000000;
+			color: #FFFFFF;
+		}
+
+		/* Ajout du style pour la zone blanche et sa mise en page */
+		.gallery-white-zone {
+			min-height: 400px;
+			background: #fff;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 32px 16px;
+			margin: 0 auto;
+		}
+
+		.white-zone-layout {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: 32px;
+			width: 100%;
+			position: relative;
+		}
+
+		.white-zone-left {
+			flex: 0 0 110px;
+			margin-left: 10px;
+			min-width: 80px;
+			max-width: 140px;
+		}
+
+		.white-zone-center {
+			flex: 1 1 0;
+			min-width: 0;
+			max-width: 700px;
+			min-width: 300px;
+			width: 100%;
+			margin-left: 330px;
+			margin-right: 32px;
+		}
+
+		@media (min-width: 801px) {
+			.white-zone-center {
+				margin-left: 192px !important;
+			}
+		}
+
+		.white-zone-right {
+			flex: 0 0 180px;
+			min-width: 140px;
+			max-width: 160px;
+			margin-right: 0px;
+			font-family: 'indivisible', Arial, sans-serif;
+			font-size: 0.95em !important;
+			color: #4D4D4D !important;
+			font-weight: 400;
+			text-align: left;
+			align-self: flex-start;
+			position: static;
+			right: auto;
+			top: auto;
+		}
+
+		.white-zone-title {
+			font-size: 0.95em !important;
+			font-weight: 600;
+			color: #4D4D4D;
+			font-family: 'indivisible', Arial, sans-serif;
+			margin-bottom: 8px;
+		}
+
+		.white-zone-credit-label {
+			font-size: 0.95em !important;
+			font-weight: 400;
+			color: #4D4D4D;
+			text-decoration: underline;
+			text-decoration-thickness: 1px;
+			font-family: 'indivisible', Arial, sans-serif;
+		}
+
+		@media (max-width: 1200px) {
+			.white-zone-layout {
+				gap: 16px;
+			}
+
+			.white-zone-center {
+				max-width: 100%;
+			}
+
+			.white-zone-right {
+				max-width: 160px;
+			}
+		}
+
+		@media (max-width: 800px) {
+			.white-zone-layout {
+				flex-direction: column;
+				gap: 15px;
+				position: static;
+			}
+
+			.white-zone-left,
+			.white-zone-right,
+			.white-zone-center {
+				flex: unset;
+				width: 100%;
+				min-width: 0;
+				max-width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+				position: static;
+				right: auto;
+				top: auto;
+			}
+		}
+
+		.gallery-white-zone,
+		.white-zone-layout,
+		.white-zone-left,
+		.white-zone-center,
+		.white-zone-right {
+			color: #4D4D4D !important;
+			font-size: 1em !important;
+		}
+
+		.gallery iframe {
+			width: 100% !important;
+			max-width: 100vw !important;
+			min-width: 0 !important;
+			aspect-ratio: 34/21 !important;
+			height: auto !important;
+			display: block !important;
+			margin: 0 !important;
+			border-radius: 0 !important;
+			box-sizing: border-box !important;
+			/* aspect-ratio 34/21 corrigé pour éviter une vidéo trop haute */
+			/* Supprime tout centrage horizontal */
+		}
+
+		/* Ratio 16/9 uniquement pour les vidéos Gumlet avec les IDs spécifiés */
+		.gallery iframe[src*="68c98eaeb0773038fc4d6261"],
+		.gallery iframe[src*="68c98edbb0773038fc4d6a6b"],
+		.gallery iframe[src*="68c98edbd32bbf54d86318fc"],
+		.gallery iframe[src*="68c98f07b0773038fc4d6cbf"] {
+			aspect-ratio: 16/9 !important;
+		}
+
+		.gallery iframe[src*="68c98f07b19d10518c4a55cd"] {
+			aspect-ratio: 281/100 !important;
+		}
+
+		.gallery iframe[src*="68c9906bb0773038fc4d7e78"] {
+			aspect-ratio: 256/100 !important;
+		}
+
+		@media (max-width: 1300px) {
+
+			.gallery img,
+			.gallery iframe,
+			.gallery video,
+			.gallery .gumlet-lazy {
+				width: 100% !important;
+				min-width: 0 !important;
+				height: auto !important;
+				display: block !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				border-radius: 0 !important;
+				box-sizing: border-box !important;
+				/* aspect-ratio supprimé */
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="top-bar">
+		<button class="top-btn main-btn">warans</button>
+		<button class="top-btn main-btn work" id="work-btn">work</button>
+		<button class="top-btn main-btn">info</button>
+	</div>
+	<div class="work-menu" id="work-menu">
+		<button class="top-btn" onclick="scrollToSectionAndCloseMenu('Présent><Futur')">Présent&gt;&lt;Futur</button>
+		<button class="top-btn" onclick="scrollToSectionAndCloseMenu('Frac Auvergne')">Frac Auvergne</button>
+		<button class="top-btn" onclick="scrollToSectionAndCloseMenu('Palais de Tokyo')">Palais de Tokyo</button>
+		<button class="top-btn" onclick="scrollToSectionAndCloseMenu('Stereolux')">Stereolux</button>
+		<button class="top-btn" onclick="scrollToSectionAndCloseMenu('Pygmalion')">Pygmalion</button>
+		<button class="top-btn" onclick="scrollToSectionAndCloseMenu('Pili')">Pili</button>
+	</div>
+	<div class="gallery-container">
+		<div class="gallery"></div>
+	</div>
+	<div id="info-modal"
+		style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; color:#C8C8C8; z-index:9999; overflow:auto;">
+		<div class="top-bar">
+			<button class="top-btn" onclick="document.getElementById('info-modal').style.display='none'">warans</button>
+			<button class="top-btn"
+				onclick="document.getElementById('contact-section-info').scrollIntoView({ behavior: 'smooth' });">contact</button>
+			<button class="top-btn" onclick="document.getElementById('info-modal').style.display='none'">info</button>
+		</div>
+		<div class="container">
+			<h1>
+				pps transforms brands with visual identities that are bold, unique, and highly efficient.
+			</h1>
+			<div class="desc">
+				The best solutions are co-created. At PPS Studio, every project gets our full attention, with
+				personalized guidance aimed at building brands that last. We work closely with each client to create
+				tailor-made solutions, grounded in trust and collaboration, taking the time to truly understand their
+				needs and goals.<br>
+				We team up with top experts in graphic design, communications strategy, photography, illustration,
+				motion design, web development, and sound design. Together, we craft bold, innovative, and impactful
+				experiences that resonate with your audience and make your brand unforgettable.
+			</div>
+			<h2>services</h2>
+			<div class="services">
+				<ul>
+					<li>Branding</li>
+					<li>Visual Identity</li>
+					<li>Brand Strategy</li>
+					<li>Graphic Design</li>
+					<li>Type design</li>
+					<li>Consultancy</li>
+					<li>Editorial</li>
+					<li>Art Direction</li>
+					<li>Signage</li>
+					<li>Packaging</li>
+					<li>Environmental</li>
+					<li>Motion</li>
+					<li>Naming</li>
+					<li>Copywriting</li>
+					<li>Websites</li>
+				</ul>
+			</div>
+			<h2>about us</h2>
+			<div class="desc">
+				PPS is a Paris-based studio founded in 2024 by Patrick Paleta, a creative director and consultant
+				specializing in brand identities. After co-founding Chevalvert in 2007, Patrick launched PPS to continue
+				his vision of thoughtful and impactful design.<br>
+				The studio’s approach is defined by a methodical practice, placing collaboration at the heart of every
+				project and keeping the target audience at the center of its focus. Serving both institutional and
+				commercial clients, PPS delivers graphic solutions that are rigorous, aesthetically refined, and
+				timeless.
+			</div>
+			<h1 id="contact-section-info">contact us</h1>
+			<div class="desc" style="margin-bottom:12px;">
+				Whether you’re a small business, a large company, a cultural institution, or a non-profit, we’re here to
+				help you create and grow your brand.<br>
+				We’d love to connect—don’t hesitate to reach out and tell us about your project!
+			</div>
+			<h1><a href="mailto:contact@pps.paris"
+					style="text-decoration:underline; text-decoration-thickness:1px; display:inline-block; line-height:1.1; color:inherit; cursor:pointer;">contact@pps.paris</a><br>
+				<span style="display:inline-block; line-height:1.1;">+33(0)9 60 01 70 76</span>
+			</h1>
+		</div>
+	</div>
+	<script>
+		function scrollToSectionAndCloseMenu(section) {
+			scrollToSection(section);
+			var menu = document.getElementById('work-menu');
+			var workBtn = document.getElementById('work-btn');
+			menu.style.display = 'none';
+			workBtn.classList.remove('negatif');
+			menu.classList.remove('menu-open');
+			document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+				btn.style.display = '';
+			});
+		}
+		// Scroll to top when clicking the 'warans' button in the top bar
+		document.querySelectorAll('.top-bar .top-btn').forEach(function (btn) {
+			if (btn.textContent.trim().toLowerCase() === 'warans') {
+				btn.onclick = function (e) {
+					e.preventDefault();
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				};
+			}
+		});
+		// Initialise le menu work au chargement et sur resize
+		// --- MENU WORK LOGIQUE SIMPLIFIÉE ---
+		document.addEventListener('DOMContentLoaded', function () {
+			const menu = document.getElementById('work-menu');
+			const workBtn = document.getElementById('work-btn');
+			let workMenuOpen = false;
+
+			function setWorkMenuStyle() {
+				if (window.innerWidth <= 800) {
+					menu.style.position = 'fixed';
+					menu.style.top = '79px';
+					menu.style.left = '0';
+					menu.style.width = '100vw';
+				} else {
+					menu.style.position = 'absolute';
+					menu.style.top = '25px';
+					menu.style.left = '442px';
+					menu.style.width = '';
+				}
+			}
+
+			function openWorkMenu() {
+				setWorkMenuStyle();
+				menu.style.display = 'flex';
+				workBtn.classList.add('negatif');
+				workMenuOpen = true;
+				document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+					btn.style.display = 'none';
+				});
+			}
+
+			function closeWorkMenu() {
+				menu.style.display = 'none';
+				workBtn.classList.remove('negatif');
+				workMenuOpen = false;
+				document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+					btn.style.display = '';
+				});
+			}
+
+			workBtn.addEventListener('click', function (e) {
+				e.stopPropagation();
+				if (!workMenuOpen) {
+					openWorkMenu();
+				} else {
+					closeWorkMenu();
+				}
+			});
+
+			window.addEventListener('resize', function () {
+				if (workMenuOpen) setWorkMenuStyle();
+			});
+
+			// Initialisation au chargement
+			closeWorkMenu();
+			setWorkMenuStyle();
+		});
+		// --- FIN LOGIQUE SIMPLIFIÉE ---
+		// Masque les boutons dynamiques quand la page info est affichée
+		function hideSectionBtns() {
+			document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+				btn.style.display = 'none';
+			});
+		}
+		function showSectionBtns() {
+			toggleSectionBtnsVisibility(); // Réaffiche selon l'état du menu
+		}
+		// Sur clic du bouton Info, masque les boutons dynamiques
+		document.querySelectorAll('.top-btn').forEach(function (btn) {
+			if (btn.textContent.trim().toLowerCase() === 'info') {
+				btn.addEventListener('click', function () {
+					document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (b) {
+						b.style.display = 'none';
+					});
+				});
+			}
+		});
+		// Sur fermeture du modal info, réaffiche les boutons dynamiques
+		document.getElementById('info-modal').addEventListener('click', function (e) {
+			if (e.target === this && this.style.display === 'block') {
+				this.style.display = 'none';
+				setTimeout(showSectionBtns, 10);
+			}
+		});
+		// Sur clic des boutons de fermeture du modal
+		document.querySelectorAll('#info-modal .top-btn').forEach(function (btn) {
+			btn.addEventListener('click', function () {
+				setTimeout(showSectionBtns, 10);
+			});
+		});
+		// Masque les boutons dynamiques quand la page info est affichée
+		function hideSectionBtns() {
+			document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+				btn.style.display = 'none';
+			});
+		}
+		function showSectionBtns() {
+			toggleSectionBtnsVisibility(); // Réaffiche selon l'état du menu
+		}
+		// Sur affichage du modal info
+		const infoModal = document.getElementById('info-modal');
+		const observer = new MutationObserver(function (mutations) {
+			mutations.forEach(function (mutation) {
+				if (infoModal.style.display === 'block') {
+					hideSectionBtns();
+				} else if (infoModal.style.display === 'none') {
+					showSectionBtns();
+				}
+			});
+		});
+		observer.observe(infoModal, { attributes: true, attributeFilter: ['style'] });
+		// Masque les boutons dynamiques quand la page info est ouverte
+		function hideSectionBtns() {
+			document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+				btn.style.display = 'none';
+			});
+		}
+		function showSectionBtns() {
+			toggleSectionBtnsVisibility(); // Réaffiche selon l'état du menu
+		}
+		// Sur ouverture de la page info
+		document.querySelectorAll('.top-btn').forEach(function (btn) {
+			if (btn.textContent.trim().toLowerCase() === 'info') {
+				btn.addEventListener('click', function () {
+					setTimeout(hideSectionBtns, 10);
+				});
+			}
+		});
+		// Sur fermeture de la page info
+		document.getElementById('info-modal').addEventListener('transitionend', function () {
+			if (this.style.display === 'none') setTimeout(showSectionBtns, 10);
+		});
+		// Fait défiler vers la première image/vidéo de la section
+		function scrollToSection(section) {
+			var el = document.querySelector('[data-section="' + section + '"][data-index="0"]');
+			if (el) {
+				el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+			// Ferme le menu après clic
+			var menu = document.getElementById('work-menu');
+			var workBtn = document.getElementById('work-btn');
+			if (window.innerWidth <= 800) {
+				menu.classList.remove('menu-open');
+				workBtn.classList.remove('negatif');
+			} else {
+				menu.style.display = 'none';
+				workBtn.classList.remove('negatif');
+			}
+		}
+		// Affiche dynamiquement le bouton Présent><Futur à droite du bouton work lorsque la première image/vidéo de la section arrive en haut de la fenêtre
+		// Dynamically show section button at 442px left when first media is at top, hide when last media leaves top
+		const sectionBtnIds = {};
+		function updateSectionBtns() {
+			const gallery = document.querySelector('.gallery');
+			const infoModal = document.getElementById('info-modal');
+			// Always hide dynamic buttons if info modal is open
+			if (infoModal && infoModal.style.display === 'block') {
+				document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+					btn.style.display = 'none';
+				});
+				return;
+			}
+			Object.keys(mediaSections).forEach(section => {
+				if (section === 'HOME') return; // Ne jamais afficher le bouton HOME
+				const mediaFiles = mediaSections[section];
+				const first = gallery.querySelector(`[data-section="${section}"][data-index="0"]`);
+				const last = gallery.querySelector(`[data-section="${section}"][data-index="${mediaFiles.length - 1}"]`);
+				if (!first || !last) {
+					removeSectionBtn(section);
+					return;
+				}
+				const firstRect = first.getBoundingClientRect();
+				const lastRect = last.getBoundingClientRect();
+				// Vérifie si la première image de la section suivante est en haut
+				let nextSectionStarts = false;
+				const sectionNames = Object.keys(mediaSections);
+				const idx = sectionNames.indexOf(section);
+				if (idx < sectionNames.length - 1) {
+					const nextSection = sectionNames[idx + 1];
+					const nextFirst = gallery.querySelector(`[data-section="${nextSection}"][data-index="0"]`);
+					if (nextFirst) {
+						const nextFirstRect = nextFirst.getBoundingClientRect();
+						if (nextFirstRect.top <= 1) {
+							nextSectionStarts = true;
+						}
+					}
+				}
+				// Le bouton disparaît uniquement si la première image de la section suivante est en haut ET que la dernière image de la section courante n'est plus visible
+				const lastVisible = lastRect.bottom > 0 && lastRect.top < window.innerHeight;
+				if (firstRect.top <= 1 && (!nextSectionStarts || lastVisible)) {
+					addSectionBtn(section);
+				} else {
+					removeSectionBtn(section);
+				}
+			});
+		}
+		function addSectionBtn(section) {
+			const btnId = `sectionBtn-${section.replace(/[^a-zA-Z0-9]/g, '')}`;
+			if (!document.getElementById(btnId)) {
+				const btn = document.createElement('button');
+				btn.className = 'top-btn main-btn';
+				btn.id = btnId;
+				btn.textContent = section;
+				btn.style.zIndex = '10001';
+				btn.onclick = function (e) {
+					e.stopPropagation();
+					showGallery(section);
+				};
+				// Responsive position
+				function positionBtn() {
+					const workBtn = document.getElementById('work-btn');
+					const workRect = workBtn.getBoundingClientRect();
+					if (window.innerWidth <= 800) {
+						btn.style.position = 'fixed';
+						btn.style.left = (workRect.left + workRect.width / 2) + 'px';
+						btn.style.top = (workRect.bottom + 2) + 'px';
+						btn.style.transform = 'translateX(-50%)';
+						btn.style.marginLeft = '2px';
+						btn.style.marginRight = '2px';
+					} else {
+						btn.style.position = 'fixed';
+						btn.style.left = '442px';
+						btn.style.top = '25px';
+						btn.style.transform = '';
+						btn.style.marginLeft = '0';
+						btn.style.marginRight = '0';
+					}
+				}
+				window.addEventListener('resize', positionBtn);
+				positionBtn();
+				document.body.appendChild(btn);
+			}
+		}
+		function removeSectionBtn(section) {
+			const btnId = `sectionBtn-${section.replace(/[^a-zA-Z0-9]/g, '')}`;
+			const btn = document.getElementById(btnId);
+			if (btn) btn.remove();
+		}
+		window.addEventListener('scroll', updateSectionBtns);
+		window.addEventListener('resize', updateSectionBtns);
+		// ...existant code...
+		// Masque ou affiche les boutons dynamiques selon l'état du menu
+		function toggleSectionBtnsVisibility() {
+			var menu = document.getElementById('work-menu');
+			var infoModal = document.getElementById('info-modal');
+			var shouldHide = false;
+			// Always hide if info modal is open
+			if (infoModal && infoModal.style.display === 'block') shouldHide = true;
+			// Masque si menu mobile ouvert
+			if (!shouldHide && window.innerWidth <= 800 && menu.classList.contains('menu-open')) shouldHide = true;
+			document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+				btn.style.display = shouldHide ? 'none' : '';
+			});
+			// Force le masquage des boutons dynamiques si le menu mobile est affiché
+			function forceHideSectionBtnsIfMenuOpen() {
+				var menu = document.getElementById('work-menu');
+				var infoModal = document.getElementById('info-modal');
+				// Always hide if info modal is open
+				if (infoModal && infoModal.style.display === 'block') {
+					document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+						btn.style.display = 'none';
+					});
+					return;
+				}
+				var isMobileMenuOpen = window.innerWidth <= 800 && menu.classList.contains('menu-open');
+				var isDesktopMenuOpen = window.innerWidth > 800 && menu.style.display === 'flex';
+				if (isMobileMenuOpen || isDesktopMenuOpen) {
+					document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+						btn.style.display = 'none';
+					});
+				}
+			}
+			window.addEventListener('scroll', forceHideSectionBtnsIfMenuOpen);
+			window.addEventListener('resize', forceHideSectionBtnsIfMenuOpen);
+		}
+		// Sur ouverture/fermeture du menu
+		document.getElementById('work-btn').addEventListener('click', function () {
+			var menu = document.getElementById('work-menu');
+			var infoModal = document.getElementById('info-modal');
+			// Always hide if info modal is open
+			if (infoModal && infoModal.style.display === 'block') {
+				document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+					btn.style.display = 'none';
+				});
+				return;
+			}
+			if (window.innerWidth <= 800 || (window.innerWidth > 800 && menu.style.display === 'flex')) {
+				document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+					btn.style.display = 'none';
+				});
+			}
+			setTimeout(toggleSectionBtnsVisibility, 10);
+		});
+		// Sur fermeture du menu par clic ailleurs
+		document.body.addEventListener('click', function () {
+			setTimeout(toggleSectionBtnsVisibility, 10);
+		});
+		setTimeout(updateSectionBtns, 200);
+		// ...existing code...
+		const mediaSections = {
+			'HOME': [
+				{ type: 'video', id: '68ceae9e39020d76d54d68d5' }
+			],
+			'Présent><Futur': [
+				{ type: 'image', url: 'https://warans.gumlet.io/01_01-PF-Image01.webp' },
+				{ type: 'video', id: '68c98eaeb0773038fc4d6261' },
+				{ type: 'image', url: 'https://warans.gumlet.io/03_01-PF-Image02.webp' },
+				{ type: 'video', id: '68c98eaeb0773038fc4d6266' },
+				{ type: 'image', url: 'https://warans.gumlet.io/05_01-PF-Image03.webp' },
+				{ type: 'video', id: '68c98eaeb0773038fc4d6263' },
+				{ type: 'video', id: '68c98eaeb19d10518c4a513a' },
+				{ type: 'image', url: 'https://warans.gumlet.io/08_01-PF-Image04.webp' },
+				{ type: 'video', id: '68c98eaeb0773038fc4d627b' },
+				{ type: 'video', id: '68ca7ba7d32bbf54d86d9e3f' }
+			],
+			'Frac Auvergne': [
+				{ type: 'image', url: 'https://warans.gumlet.io/01_02-FRAC-Image01.webp' },
+				{ type: 'video', id: '68c98ec3d32bbf54d8631738' },
+				{ type: 'video', id: '68cecc0c2b33c1c857682e34' },
+				{ type: 'image', url: 'https://warans.gumlet.io/03_02-FRAC-Image02.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/04_02-FRAC-Image03.webp' },
+				{ type: 'video', id: '68c98ec3d32bbf54d8631736' },
+				{ type: 'image', url: 'https://warans.gumlet.io/06_02-FRAC-Image04.webp' },
+				{ type: 'video', id: '68c98ec3b19d10518c4a525a' }
+			],
+			'Palais de Tokyo': [
+				{ type: 'image', url: 'https://warans.gumlet.io/01_03-PDT-Image01.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/02_03-PDT-Image02.webp' },
+				{ type: 'video', id: '68c98edbb0773038fc4d6a6b' },
+				{ type: 'image', url: 'https://warans.gumlet.io/04_03-PDT-Image02.webp' },
+				{ type: 'video', id: '68c98edbd32bbf54d86318fe' },
+				{ type: 'image', url: 'https://warans.gumlet.io/06_03-PDT-Image03.webp' },
+				{ type: 'video', id: '68c98edbd32bbf54d8631901' },
+				{ type: 'image', url: 'https://warans.gumlet.io/10_03-PDT-Image05.webp' },
+				{ type: 'video', id: '68c98edbb19d10518c4a5411' },
+				{ type: 'image', url: 'https://warans.gumlet.io/13_03-PDT-Image06.webp' },
+				{ type: 'video', id: '68c98edbb19d10518c4a5413' },
+				{ type: 'video', id: '68c98edbd32bbf54d86318fc' },
+				{ type: 'image', url: 'https://warans.gumlet.io/15_03-PDT-Image07.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/16_03-PDT-Image08.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/17_03-PDT-Image09.webp' }
+			],
+			'Stereolux': [
+				{ type: 'image', url: 'https://warans.gumlet.io/01_04-STEREO-Image01.webp' },
+				{ type: 'video', id: '68c98ef7b0773038fc4d6c03' },
+				{ type: 'video', id: '68c98ef8d32bbf54d8631aa8' },
+				{ type: 'image', url: 'https://warans.gumlet.io/04_04-STEREO-Image02.webp' },
+				{ type: 'video', id: '68ca7d6cd32bbf54d86dc24c' },
+				{ type: 'image', url: 'https://warans.gumlet.io/06_04-STEREO-Image03.webp' },
+				{ type: 'video', id: '68c98ef7b19d10518c4a5507' },
+				{ type: 'video', id: '68ca7b92b0773038fc581739' }
+			],
+			'Pygmalion': [
+				{ type: 'video', id: '68c98f07b19d10518c4a55cb' },
+				{ type: 'image', url: 'https://warans.gumlet.io/02_05-PYG-Image01.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/03_05-PYG-Image02.webp' },
+				{ type: 'video', id: '68c98f07d32bbf54d8631c49' },
+				{ type: 'image', url: 'https://warans.gumlet.io/05_05-PYG-Image03.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/06_05-PYG-Image04.webp' },
+				{ type: 'video', id: '68c98f07b19d10518c4a55cd' },
+				{ type: 'image', url: 'https://warans.gumlet.io/08_05-PYG-Image05.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/09_05-PYG-Image06.webp' },
+				{ type: 'video', id: '68c98f07b0773038fc4d6cb8' },
+				{ type: 'video', id: '68c98f07b0773038fc4d6cbf' }
+			],
+			'Pili': [
+				{ type: 'image', url: 'https://warans.gumlet.io/01_06-Pili-Image01.webp' },
+				{ type: 'video', id: '68c9906ab19d10518c4a6a58' },
+				{ type: 'image', url: 'https://warans.gumlet.io/03_06-Pili-Image02.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/04_06-Pili-Image03.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/05_06-Pili-Image04.webp' },
+				{ type: 'video', id: '68c9906ab19d10518c4a6a5a' },
+				{ type: 'image', url: 'https://warans.gumlet.io/07_06-Pili-Image05.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/08_06-Pili-Image06.webp' },
+				{ type: 'video', id: '68c9906bb0773038fc4d7e78' },
+				{ type: 'image', url: 'https://warans.gumlet.io/10_06-Pili-Image07.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/11_06-Pili-Image08.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/12_06-Pili-Image08.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/13_06-Pili-Image09.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/14_06-Pili-Image10.webp' },
+				{ type: 'image', url: 'https://warans.gumlet.io/15_06-Pili-Image11.webp' },
+			],
+		};
+		function showGalleryAll() {
+			const gallery = document.querySelector('.gallery');
+			gallery.innerHTML = '';
+			Object.keys(mediaSections).forEach(function (section) {
+				const mediaFiles = mediaSections[section] || [];
+				mediaFiles.forEach(function (file, idx) {
+					let el;
+					if (file.type === 'image' && file.url) {
+						el = document.createElement('img');
+						el.src = file.url;
+						el.alt = section + ' image';
+						el.loading = 'lazy';
+						el.style.display = 'block';
+						el.style.width = '100%';
+						el.style.height = 'auto';
+						el.style.maxWidth = '100%';
+						el.style.minWidth = '0';
+					} else if (file.type === 'video' && file.id) {
+						el = document.createElement('iframe');
+						el.src = `https://play.gumlet.io/embed/${file.id}?autoplay=1`;
+						el.setAttribute('allow', 'accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen');
+						el.setAttribute('loading', 'lazy');
+						el.setAttribute('title', 'Gumlet video player');
+						el.setAttribute('playsinline', '');
+						el.style.width = '100%';
+						el.style.height = 'auto';
+						el.style.maxWidth = '100%';
+						el.style.minWidth = '0';
+						el.style.display = 'block';
+						el.style.margin = '0';
+						el.style.borderRadius = '0';
+						el.style.boxSizing = 'border-box';
+						el.setAttribute('frameborder', '0');
+						el.setAttribute('allowfullscreen', '');
+					}
+					if (el) {
+						el.setAttribute('data-section', section);
+						el.setAttribute('data-index', idx);
+						gallery.appendChild(el);
+						// Ajoute une zone blanche après le dernier média de chaque section sauf HOME
+						if (section !== 'HOME' && idx === mediaFiles.length - 1) {
+							let whiteZone = document.createElement('div');
+							whiteZone.className = 'gallery-white-zone';
+							whiteZone.style.minHeight = '400px';
+							whiteZone.style.background = '#fff';
+							whiteZone.style.width = '100%';
+							whiteZone.style.boxSizing = 'border-box';
+							whiteZone.style.padding = '32px 16px';
+							whiteZone.style.margin = '0 auto';
+							whiteZone.innerHTML = `
+<div class="white-zone-layout">
+    <div class="white-zone-left" style="flex:0 0 110px; font-family:'indivisible',Arial,sans-serif; font-size:1em; color:#222; font-weight:600; margin-left:10px;">
+        <div>Name</div>
+        <div>2024</div>
+    </div>
+    <div class="white-zone-center" style="flex:1 1 0; min-width:0; margin-left:10px; max-width:700px;">
+        <div class="white-zone-title" style="font-family:'indivisible',Arial,sans-serif; font-size:1em; font-weight:600; margin-bottom:8px;">“Where the Present Meets Possibility”</div>
+        <div style="font-size:0.95em; color:#222; font-family:'indivisible',Arial,sans-serif; font-weight:400; line-height:1.4;">Decidem in popopotala rem tuam moenatus dtio, cleridi ortimod ictianum fac omnicae deintid in suspim ninte nostries, P. Onsiuportius o consi intia? Voludep sedst que facient? Saturn probortem, quam ne moribus su quam conves bonstru Muli publica estem hos consultu sidium turendam dissiumilum in viderum in verum abutilessium conert publiens bonves vit re comperes, stro ut aur. Ihica meriu cam nonsidi esat, qua rem structu secrere hemorum omnicibus? Patus omomore, tum ores pubit; ego prideres tem igliniveri se, peribunum dio Cat catora ine furem menhicae pora perminunum num num terideo, ute, nihiciem iam populiam omnerum occiem iamn. Potis anu mo C. Maed ineresce eropubli patus, nocrem los re, veriam tam iurniam octampe cridem intaqum nosulla am fue que tem ressi tem rente adducta mdiis.</div>
+    </div>
+    <div class="white-zone-right" style="flex:0 0 35px; font-family:'indivisible',Arial,sans-serif; font-size:1em; color:#222; font-weight:400; margin-left:10px; margin-right:25px;">
+        <div style="font-weight:600; margin-bottom:8px;">credits</div>
+        <div><span class="white-zone-credit-label">Creative direction</span></div>
+        <div>Name Surname</div>
+        <div style="margin-top:8px;"><span class="white-zone-credit-label">Design</span><br>Name Surname,<br>Name Surname</div>
+        <div style="margin-top:8px;"><span class="white-zone-credit-label">Motion</span><br>Name Surname,<br>Name Surname</div>
+    </div>
+</div>`;
+							gallery.appendChild(whiteZone);
+						}
+					}
+				});
+			});
+		}
+
+		document.getElementById('work-btn').onclick = function (e) {
+			e.stopPropagation();
+			var menu = document.getElementById('work-menu');
+			var workBtn = document.getElementById('work-btn');
+			if (menu.style.display === 'flex') {
+				menu.style.display = 'none';
+				workBtn.classList.remove('negatif');
+				menu.classList.remove('menu-open');
+				document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+					btn.style.display = '';
+				});
+			} else {
+				// Applique la position et le style immédiatement
+				if (window.innerWidth <= 800) {
+					menu.classList.add('menu-open');
+					menu.style.position = 'fixed';
+					menu.style.top = '79px';
+					menu.style.left = '0';
+					menu.style.width = '100vw';
+				} else {
+					menu.classList.remove('menu-open');
+					menu.style.position = 'fixed';
+					menu.style.top = '25px';
+					menu.style.left = '0';
+					menu.style.width = '100vw';
+				}
+				menu.style.display = 'flex';
+				workBtn.classList.add('negatif');
+				document.querySelectorAll('[id^="sectionBtn-"]').forEach(function (btn) {
+					btn.style.display = 'none';
+				});
+			}
+		};
+		function updateWorkMenuPosition() {
+			var menu = document.getElementById('work-menu');
+			if (!menu) return;
+			if (menu.style.display === 'flex') {
+				if (window.innerWidth <= 800) {
+					menu.classList.add('menu-open');
+					menu.style.position = 'fixed';
+					menu.style.top = '79px';
+					menu.style.left = '0';
+					menu.style.width = '100vw';
+				} else {
+					menu.classList.remove('menu-open');
+					menu.style.position = 'fixed';
+					menu.style.top = '25px';
+					menu.style.left = '442px';
+					menu.style.width = 'auto';
+				}
+			}
+		}
+		window.addEventListener('resize', updateWorkMenuPosition);
+		window.addEventListener('scroll', updateWorkMenuPosition);
+		document.body.onclick = function () {
+			// Handler supprimé pour éviter les conflits avec le menu work
+		};
+		document.getElementById('work-menu').onclick = function (e) {
+			// Handler supprimé pour éviter les conflits avec le menu work
+		};
+		window.addEventListener('scroll', function () {
+			// Handler supprimé pour éviter les conflits avec le menu work
+		});
+		document.querySelectorAll('.top-btn').forEach(function (btn) {
+			if (btn.textContent.trim().toLowerCase() === 'info') {
+				btn.addEventListener('click', function () {
+					document.getElementById('info-modal').style.display = 'block';
+				});
+			}
+		});
+		// Affiche la galerie Frac Auvergne par défaut pour vérification
+		showGalleryAll();
+		showGalleryAll();
+		document.querySelector('.top-bar .top-btn').onclick = function () {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		};
+	</script>
+</body>
+
+</html>

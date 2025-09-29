@@ -6,8 +6,7 @@
     background: var(--color-surface);
     width: 100%;
     box-sizing: border-box;
-    margin: var(--desktop-margin) 0 var(--desktop-margin) 0 !important;
-    padding-left: var(--desktop-margin) !important;
+    margin: var(--desktop-margin) !important;
 }
 
 /* White zone layout */
@@ -120,12 +119,8 @@
 
 /* Desktop adjustments */
 @media (min-width: 901px) {
-    .gallery-white-zone {
-        padding-left: var(--desktop-margin) !important;
-    }
-
     .white-zone-center {
-        margin-left: 69px !important;
+        margin-left: 61px !important;
     }
 
     .white-zone-right {
@@ -142,8 +137,7 @@
 /* Mobile adjustments */
 @media (max-width: 900px) {
     .gallery-white-zone {
-        margin: var(--mobile-margin) 0 var(--mobile-margin) 0 !important;
-        padding-left: var(--mobile-margin) !important;
+        margin: var(--mobile-margin)!important;
     }
 
     .white-zone-layout {

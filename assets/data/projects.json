@@ -1,0 +1,11 @@
+{
+  "projects": [
+    { "slug": "home", "title": "HOME", "json": "home.json" },
+    { "slug": "present-futur", "title": "Présent><Futur", "json": "present-futur.json" },
+    { "slug": "frac-auvergne", "title": "Frac Auvergne", "json": "frac-auvergne.json" },
+    { "slug": "palais-de-tokyo", "title": "Palais de Tokyo", "json": "palais-de-tokyo.json" },
+    { "slug": "stereolux", "title": "Stereolux", "json": "stereolux.json" },
+    { "slug": "pygmalion", "title": "Pygmalion", "json": "pygmalion.json" },
+    { "slug": "pili", "title": "Pili", "json": "pili.json" }
+  ]
+}

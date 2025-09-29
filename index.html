@@ -11,6 +11,20 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- Gumlet Player JS -->
+	<script src="https://cdn.gumlet.com/player/gumlet-player.min.js"></script>
+	<!-- Gumlet Image Optimizer -->
+	<script type="text/javascript">
+		window.GUMLET_CONFIG = {
+			hosts: [{
+				current: "https://pps.paris/WaRanS/IMAGES",
+				gumlet: "warans.gumlet.io"
+			}],
+			lazy_load: true
+		};
+	(function () { d = document; s = d.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/gumlet.js@2.2/dist/gumlet.min.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+	</script>
 </head>
 <body>
     <!-- Top Navigation Bar -->

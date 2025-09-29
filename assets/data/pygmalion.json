@@ -1,0 +1,24 @@
+{
+  "title": "Pygmalion",
+  "slug": "pygmalion",
+  "year": "2022",
+  "description": "Metamorphosis",
+  "credits": [
+    { "role": "Creative direction", "names": ["Name Surname"] },
+    { "role": "Design", "names": ["Name Surname", "Name Surname"] },
+    { "role": "Motion", "names": ["Name Surname"] }
+  ],
+  "medias": [
+				{ "type": "video", "id": "68c98f07b19d10518c4a55cb" },
+				{ "type": "image", "url": "https://warans.gumlet.io/02_05-PYG-Image01.webp" },
+				{ "type": "image", "url": "https://warans.gumlet.io/03_05-PYG-Image02.webp" },
+				{ "type": "video", "id": "68c98f07d32bbf54d8631c49" },
+				{ "type": "image", "url": "https://warans.gumlet.io/05_05-PYG-Image03.webp" },
+				{ "type": "image", "url": "https://warans.gumlet.io/06_05-PYG-Image04.webp" },
+				{ "type": "video", "id": "68c98f07b19d10518c4a55cd" },
+				{ "type": "image", "url": "https://warans.gumlet.io/08_05-PYG-Image05.webp" },
+				{ "type": "image", "url": "https://warans.gumlet.io/09_05-PYG-Image06.webp" },
+				{ "type": "video", "id": "68c98f07b0773038fc4d6cb8" },
+				{ "type": "video", "id": "68c98f07b0773038fc4d6cbf" }
+			]
+}

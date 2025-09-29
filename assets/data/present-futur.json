@@ -1,0 +1,24 @@
+{
+  "title": "Présent><Futur",
+  "slug": "present-futur",
+  "year": "2024",
+  "description": "Where the Present Meets Possibility",
+  "credits": [
+    { "role": "Creative direction", "names": ["Name Surname"] },
+    { "role": "Design", "names": ["Name Surname", "Name Surname"] },
+    { "role": "Motion", "names": ["Name Surname"] }
+  ],
+  "medias": [
+				{ "type": "image", "url": "https://warans.gumlet.io/01_01-PF-Image01.webp" },
+				{ "type": "video", "id": "68c98eaeb0773038fc4d6261" },
+				{ "type": "image", "url": "https://warans.gumlet.io/03_01-PF-Image02.webp" },
+				{ "type": "video", "id": "68c98eaeb0773038fc4d6266" },
+				{ "type": "image", "url": "https://warans.gumlet.io/05_01-PF-Image03.webp" },
+				{ "type": "video", "id": "68c98eaeb0773038fc4d6263" },
+				{ "type": "video", "id": "68c98eaeb19d10518c4a513a" },
+				{ "type": "image", "url": "https://warans.gumlet.io/08_01-PF-Image04.webp" },
+				{ "type": "video", "id": "68c98eaeb0773038fc4d627b" },
+				{ "type": "video", "id": "68ca7ba7d32bbf54d86d9e3f" }
+			],
+  "showInfo": true
+}

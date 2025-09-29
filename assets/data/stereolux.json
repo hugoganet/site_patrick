@@ -1,0 +1,21 @@
+{
+  "title": "Stereolux",
+  "slug": "stereolux",
+  "year": "2022",
+  "description": "Sound & Vision",
+  "credits": [
+    { "role": "Creative direction", "names": ["Name Surname"] },
+    { "role": "Design", "names": ["Name Surname", "Name Surname"] },
+    { "role": "Motion", "names": ["Name Surname"] }
+  ],
+  "medias": [
+        { "type": "image", "url": "https://warans.gumlet.io/01_04-STEREO-Image01.webp" },
+        { "type": "video", "id": "68c98ef7b0773038fc4d6c03" },
+        { "type": "video", "id": "68c98ef8d32bbf54d8631aa8" },
+        { "type": "image", "url": "https://warans.gumlet.io/04_04-STEREO-Image02.webp" },
+        { "type": "video", "id": "68ca7d6cd32bbf54d86dc24c" },
+        { "type": "image", "url": "https://warans.gumlet.io/06_04-STEREO-Image03.webp" },
+        { "type": "video", "id": "68c98ef7b19d10518c4a5507" },
+        { "type": "video", "id": "68ca7b92b0773038fc581739" }
+			]
+}

@@ -1,35 +1,40 @@
-/* Gallery CSS - Gallery container and media styles */
+/* Gallery CSS - Full-bleed media, no gaps */
 
-/* Gallery container */
-.gallery-container {
-    width: 100vw;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 1;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-/* Gallery */
+/* Ensure the container and inner gallery take the full viewport width */
+.gallery-container,
 .gallery {
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
-/* Gallery media elements */
+/* Remove gaps between stacked media */
+.gallery {
+    display: block !important; /* simple block flow, one after another */
+}
+
+/* Full-bleed media: images, videos, iframes (Gumlet embeds), gumlet lazy elems */
 .gallery img,
-.gallery video {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    border-radius: 0;
+.gallery iframe,
+.gallery video,
+.gallery .gumlet-lazy {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Defensive: if any parent sets a gap, neutralize it here */
+.gallery { gap: 0 !important; }
+
+/* Default aspect ratio for embedded Gumlet iframes.
+   You can override per media via JSON by providing `"ratio": "16/9"` (or any ratio),
+   which sets an inline style and will take precedence over this rule. */
+.gallery iframe {
+	aspect-ratio: 34 / 21 !important;
 }
