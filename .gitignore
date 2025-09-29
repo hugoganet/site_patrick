@@ -42,6 +42,9 @@ pids
 dist/
 build/
 
+# Built CSS bundles
+assets/css/main.bundle.css
+
 # Dependency directories
 jspm_packages/
 

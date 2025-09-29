@@ -1,7 +1,7 @@
 {
-  "buildCommand": null,
+  "buildCommand": "npm run build",
   "outputDirectory": ".",
-  "installCommand": null,
+  "installCommand": "npm install",
   "framework": null,
   "headers": [
     {
@@ -10,6 +10,15 @@
         {
           "key": "Content-Type",
           "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/assets/css/main.bundle.css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     }

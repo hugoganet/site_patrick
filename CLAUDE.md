@@ -8,23 +8,38 @@ Warans Studio website is a modern portfolio website built with vanilla HTML5, CS
 
 ## Development Commands
 
+### CSS Build Process
+The project uses PostCSS for CSS optimization and bundling:
+```bash
+# Build optimized CSS bundle (for production)
+npm run build:css
+
+# Build and serve for development
+npm run dev
+
+# Watch mode for CSS changes
+npm run watch:css
+
+# Full build (runs CSS bundling)
+npm run build
+```
+
+**Development vs Production:**
+- **Development**: Use `index.dev.html` with `assets/css/main.css` (preserves @imports for easier debugging)
+- **Production**: Use `index.html` with `assets/css/main.bundle.css` (single optimized file)
+
 ### Serving the Application
 Since this uses ES6 modules, you need to serve files over HTTP (not file://).
 ```bash
-# Using Python
+# Development with CSS building
+npm run dev
+
+# Or manually serve after building
+npm run build && python3 -m http.server 8000
+
+# Simple serving (using index.dev.html)
 python3 -m http.server 8000
-
-# Using Node.js (if http-server is installed)
-npx http-server
-
-# Using PHP
-php -S localhost:8000
 ```
-
-### No Build Process
-- Direct browser refresh for testing changes
-- No compilation, bundling, or preprocessing required
-- All JavaScript modules are loaded natively by the browser
 
 ### Deployment
 The site is deployed on **Vercel** with automatic deployments:
@@ -96,7 +111,8 @@ All media now served through Gumlet CDN (warans.gumlet.io):
 
 ### CSS Architecture
 - **Component-based**: Separate stylesheets for each UI component
-- **Import System**: All components imported into `main.css`
+- **Build System**: PostCSS pipeline for optimization and bundling
+- **Import Resolution**: @import statements resolved into single bundle
 - **Token-driven**: Design decisions centralized in `tokens.css`
 - **Responsive**: Mobile-first approach with `responsive.css`
 - **Typography**: Uses Adobe TypeKit "Indivisible" font family
@@ -112,11 +128,12 @@ The gallery module (`assets/js/modules/gallery.js`) handles:
 - Responsive video aspect ratios
 
 ### Performance Optimizations
-- Gumlet CDN for optimized media delivery
-- Intersection Observer API for lazy loading
-- Throttled scroll events (real-time updates)
-- WebP images with automatic format selection
-- Adaptive video streaming
+- **CSS Bundling**: Single optimized CSS file eliminates @import waterfall
+- **PostCSS Minification**: Reduced CSS file size with preserved functionality
+- **Gumlet CDN**: Optimized media delivery with WebP format and adaptive streaming
+- **Intersection Observer API**: Lazy loading for images and videos
+- **Throttled scroll events**: Real-time updates without performance impact
+- **Vercel CDN**: Global edge network for fast worldwide delivery
 
 ### Navigation System
 - Responsive work menu with dynamic positioning
