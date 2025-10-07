@@ -85,14 +85,21 @@
     /* margin-bottom: 8px; */
 }
 
+/* Credit section styling */
+.white-zone-credit-section {
+    line-height: inherit;
+    margin-bottom: 0;
+}
+
 /* Credit names styling for line wrapping control */
 .credit-names {
     display: block;
-    margin-top: 2px;
+    margin-top: 0;
     margin-left: 0;
     padding-left: 0;
     word-wrap: break-word;
     hyphens: auto;
+    line-height: inherit;
 }
 
 /* Force text styles */
@@ -100,8 +107,8 @@
 .white-zone-center,
 .white-zone-right {
     color: var(--gray-600) !important;
-    font-size: 1em !important;
-    line-height: var(--leading-tight) !important;
+    font-size: 0.9em !important;
+    line-height: 1.3 !important;
 }
 
 .white-zone-title {
@@ -142,6 +149,34 @@
 
     .white-zone-layout {
         gap: var(--mobile-margin);
+    }
+
+    /* Mobile credit section styling */
+    .white-zone-credit-section {
+        line-height: inherit;
+        margin-bottom: 0;
+    }
+
+    /* Mobile credit names styling */
+    .credit-names {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+        padding-left: 0;
+        word-wrap: break-word;
+        hyphens: auto;
+        line-height: inherit;
+    }
+
+    .white-zone-credit-label {
+        color: var(--gray-600) !important;
+        font-size: 1em !important;
+        line-height: var(--leading-tight) !important;
+    }
+
+    .white-zone-credits-header {
+        font-weight: var(--weight-bold);
+        margin-bottom: 0;
     }
 }
 

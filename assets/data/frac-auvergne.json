@@ -1,21 +1,25 @@
 {
   "title": "Frac Auvergne",
   "slug": "frac-auvergne",
-  "year": "2023",
-  "description": "Contemporary Visions",
+  "description": "Details awaken curiosity, images reveal stories",
+  "longDescription": "Founded in 1985 with a strong focus on painting, the Frac Auvergne has gradually expanded its scope. Since 2004, the collection has opened up to broader questions about the image and the dialogue between painting, photography, and cinema. Today, it brings together more than a thousand works, including pieces by David Lynch, Luc Tuymans, Albert Oehlen, and Gregory Crewdson. Soon, the Frac will enter a new chapter with its move to the Halle aux Blés in Clermont-Ferrand. This relocation is also the occasion to rethink its identity: the logotype draws inspiration from lapidary engravings found on the Halle’s historic pillars. By blending heritage with contemporary design, the new identity reflects a subtle dialogue between eras and affirms the Frac’s place in a vibrant cultural landscape.",
   "credits": [
-    { "role": "Creative direction", "names": ["Name Surname"] },
-    { "role": "Design", "names": ["Name Surname", "Name Surname"] },
-    { "role": "Motion", "names": ["Name Surname"] }
+    { "role": "Creative direction", "names": ["Patrick Paleta (Chevalvert)"] },
+    { "role": "Design", "names": ["Patrick Paleta", "Mathieu Mohamad"] },
+    { "role": "Motion", "names": ["warans"] }
   ],
   "medias": [
         { "type": "image", "url": "https://warans.gumlet.io/01_02-FRAC-Image01.webp" },
         { "type": "video", "id": "68c98ec3d32bbf54d8631738" },
+        { "type": "image", "url": "https://warans.gumlet.io/04_02-FRAC-Image03.webp" },
+        { "type": "image", "url": "https://warans.gumlet.io/09_02-FRAC-Image07.webp" },
         { "type": "video", "id": "68cecc0c2b33c1c857682e34" },
         { "type": "image", "url": "https://warans.gumlet.io/03_02-FRAC-Image02.webp" },
-        { "type": "image", "url": "https://warans.gumlet.io/04_02-FRAC-Image03.webp" },
+        { "type": "image", "url": "https://warans.gumlet.io/08_02-FRAC-Image06.webp" },
+        { "type": "video", "id": "68dc0ff6a569ece04f424a94" },
         { "type": "video", "id": "68c98ec3d32bbf54d8631736" },
         { "type": "image", "url": "https://warans.gumlet.io/06_02-FRAC-Image04.webp" },
-        { "type": "video", "id": "68c98ec3b19d10518c4a525a" }
+        { "type": "video", "id": "68c98ec3b19d10518c4a525a" },
+        { "type": "image", "url": "https://warans.gumlet.io/07_02-FRAC-Image05.webp" }
 			]
-}
+      }

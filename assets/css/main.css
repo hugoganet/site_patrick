@@ -58,6 +58,12 @@ h2 {
     width: 100%;
 }
 
+/* Highlighted phrases - inherits all .desc styles but with custom font-weight */
+.highlight-phrase {
+    font-weight: 500;
+    text-shadow: 0.7px 0 0 currentColor; /* Simule une graisse plus importante */
+}
+
 /* Services grid */
 .services {
     display: grid;

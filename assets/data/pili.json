@@ -1,12 +1,13 @@
 {
   "title": "Pili",
   "slug": "pili",
-  "year": "2021",
-  "description": "Digital Awakening",
+  "description": "Inspired by Life",
+  "longDescription": "Pili is a producer of bio-based dyes and pigments. After a decade of innovation, the company is revolutionizing the color industry with its unique manufacturing process, powered by microorganisms. The logo draws inspiration from the biological cell, reflecting the organic and living nature of Pili’s work. Its precise geometry, however, balances this organic reference with a nod to industrial processes—rigorous, reproducible, and controlled. The visual identity is further enhanced by patterns reminiscent of microorganisms at work, highlighting the scientific and innovative dimension of the brand. Indigo, the first historic color produced by Pili, becomes a central element of the overall graphic system, anchoring the identity in the brand’s heritage.",
  "credits": [
-    { "role": "Creative direction", "names": ["Name Surname"] },
-    { "role": "Design", "names": ["Name Surname", "Name Surname"] },
-    { "role": "Motion", "names": ["Name Surname"] }
+    { "role": "Creative direction", "names": ["Patrick Paleta (Chevalvert)"] },
+    { "role": "Design", "names": ["Patrick Paleta", "Stéphane Buellet", "Noémie Erb"] },
+    { "role": "Motion", "names": ["warans"] },
+    { "role": "Photo", "names": ["Marie-Sarah Adenis, Pili"] }
   ],
   "medias": [
 	{ "type": "image", "url": "https://warans.gumlet.io/01_06-Pili-Image01.webp" },
@@ -23,6 +24,7 @@
 	{ "type": "image", "url": "https://warans.gumlet.io/12_06-Pili-Image08.webp" },
 	{ "type": "image", "url": "https://warans.gumlet.io/13_06-Pili-Image09.webp" },
 	{ "type": "image", "url": "https://warans.gumlet.io/14_06-Pili-Image10.webp" },
+	{ "type": "image", "url": "https://warans.gumlet.io/16_06-Pili-Image12.webp" },
 	{ "type": "image", "url": "https://warans.gumlet.io/15_06-Pili-Image11.webp" }
   ]
 }

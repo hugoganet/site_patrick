@@ -1,12 +1,13 @@
 {
   "title": "Pygmalion",
   "slug": "pygmalion",
-  "year": "2022",
-  "description": "Metamorphosis",
+  "description": "A journey of dualities, casting light across time",
+  "longDescription": "The Ensemble Pygmalion is distinguished by the originality of its repertoire, reviving lesser-known works by major composers and reinterpreting them with a contemporary vision. This rediscovery of forgotten pieces is enhanced by a transversal approach. Pygmalion offers its audience a musical experience that is both original and timeless, reaching a wide public of diverse cultures and backgrounds. The ensemble’s visual identity reflects this universe—at once classical and contemporary—while highlighting the experimental dimension of its performances. The graphic system illustrates this transversality through bold aesthetic crossings, pushing the boundaries of the experimental.",
   "credits": [
-    { "role": "Creative direction", "names": ["Name Surname"] },
-    { "role": "Design", "names": ["Name Surname", "Name Surname"] },
-    { "role": "Motion", "names": ["Name Surname"] }
+    { "role": "Creative direction", "names": ["Patrick Paleta (Chevalvert)"] },
+    { "role": "Design", "names": ["Patrick Paleta", "Mathieu Mohamad", "Noémie Erb"] },
+    { "role": "Motion", "names": ["warans"] },
+    { "role": "Website", "names": ["Stéphane Buellet","Fruit du dragon"] }
   ],
   "medias": [
 				{ "type": "video", "id": "68c98f07b19d10518c4a55cb" },

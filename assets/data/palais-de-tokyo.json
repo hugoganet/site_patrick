@@ -1,12 +1,12 @@
 {
   "title": "Palais de Tokyo",
   "slug": "palais-de-tokyo",
-  "year": "2023",
-  "description": "Institutional Renaissance",
+  "description": "Where art breathes life takes shape", 
+  "longDescription": "For its 20th anniversary, the Palais de Tokyo is embracing a new challenge: reaffirming its role as a committed art center through the launch of Palais Vivant. Rooted in ecological thinking, the project explores ideas such as institutional permaculture, biodiversity of forms, and institutional therapy. Its new identity was imagined as a living organism—flexible, resilient, and constantly evolving. Inspired by both natural vertical growth and the architecture of the Palais, the logotype adapts and transforms over time. It becomes a visual metaphor for the relationship between humans, nature, and life cycles, leaving a lasting imprint with each of its iterations.",
   "credits": [
-    { "role": "Creative direction", "names": ["Name Surname"] },
-    { "role": "Design", "names": ["Name Surname", "Name Surname"] },
-    { "role": "Motion", "names": ["Name Surname"] }
+    { "role": "Creative direction", "names": ["Patrick Paleta (Chevalvert)"] },
+    { "role": "Design", "names": ["Patrick Paleta", "Mathieu Mohamad"] },
+    { "role": "Motion", "names": ["warans", "Stéphane Buellet"] }
   ],
   "medias": [
 				{ "type": "image", "url": "https://warans.gumlet.io/01_03-PDT-Image01.webp" },
@@ -15,13 +15,15 @@
 				{ "type": "image", "url": "https://warans.gumlet.io/04_03-PDT-Image02.webp" },
 				{ "type": "video", "id": "68c98edbd32bbf54d86318fe" },
 				{ "type": "image", "url": "https://warans.gumlet.io/06_03-PDT-Image03.webp" },
+				{ "type": "image", "url": "https://warans.gumlet.io/08_03-PDT-Image04.webp" },
 				{ "type": "video", "id": "68c98edbd32bbf54d8631901" },
 				{ "type": "image", "url": "https://warans.gumlet.io/10_03-PDT-Image05.webp" },
 				{ "type": "video", "id": "68c98edbb19d10518c4a5411" },
 				{ "type": "image", "url": "https://warans.gumlet.io/13_03-PDT-Image06.webp" },
 				{ "type": "video", "id": "68c98edbb19d10518c4a5413" },
-				{ "type": "video", "id": "68c98edbd32bbf54d86318fc", "ratio": "16/9" },
 				{ "type": "image", "url": "https://warans.gumlet.io/15_03-PDT-Image07.webp" },
+				{ "type": "video", "id": "68c98edbd32bbf54d86318fc", "ratio": "16/9" },
+				{ "type": "image", "url": "https://warans.gumlet.io/18_03-PDT-Image10.webp" },
 				{ "type": "image", "url": "https://warans.gumlet.io/16_03-PDT-Image08.webp" },
 				{ "type": "image", "url": "https://warans.gumlet.io/17_03-PDT-Image09.webp" }
 			]

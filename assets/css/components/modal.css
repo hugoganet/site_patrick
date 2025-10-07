@@ -9,7 +9,7 @@
     width: 100vw;
     height: 100vh;
     background: var(--color-inverse-bg);
-    color: var(--color-text);
+    color: var(--color-inverse-text);
     z-index: var(--z-modal);
     overflow: auto;
 }

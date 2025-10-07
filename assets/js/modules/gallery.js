@@ -135,10 +135,18 @@ function renderInfoWhiteZone(project) {
         createElement('div', { textContent: project.year || '' })
     ]);
 
-    // Center: description (used as title line in the original design)
-    const center = createElement('div', { className: 'white-zone-center' }, [
-        project.description ? createElement('div', { className: 'white-zone-title', textContent: project.description }) : null
-    ].filter(Boolean));
+    // Center: description (used as title line in the original design) + long description
+    const centerChildren = [];
+    if (project.description) {
+        centerChildren.push(createElement('div', { className: 'white-zone-title', textContent: project.description }));
+    }
+    if (project.longDescription) {
+        console.log('Long description found:', project.longDescription.substring(0, 50) + '...');
+        centerChildren.push(createElement('div', { className: 'white-zone-long-description', textContent: project.longDescription }));
+    } else {
+        console.log('No long description for project:', project.title);
+    }
+    const center = createElement('div', { className: 'white-zone-center' }, centerChildren);
 
     // Right: credits, grouped by role
     const rightChildren = [];
@@ -147,7 +155,7 @@ function renderInfoWhiteZone(project) {
         project.credits.forEach(c => {
             rightChildren.push(createElement('div', { className: 'white-zone-credit-section' }, [
                 createElement('span', { className: 'white-zone-credit-label', textContent: c.role || '' }),
-                createElement('div', { className: 'credit-names', textContent: (c.names || []).join(', ') })
+                createElement('div', { className: 'credit-names', innerHTML: (c.names || []).join('<br>') })
             ]));
         });
     }

@@ -1,21 +1,27 @@
 {
   "title": "Stereolux",
   "slug": "stereolux",
-  "year": "2022",
-  "description": "Sound & Vision",
+  "description": "A Living Sign, where creativity resonates and every corner tells a story",
+  "longDescription": "Opened in 2011, Stereolux has established itself as a key venue within both the local and national cultural landscape. This multidisciplinary center focuses on contemporary music and digital arts, offering a rich and diverse program. Its visual identity is designed to be both dynamic and surprising, built around a simple and adaptable logotype combined with a graphic system centered on images. While recognizable in its static version, the logotype breaks with conventional codes in its animated form. The letters stretch, shift, and amplify, embodying the multidisciplinary nature and creative energy of the venue. This unconventional approach allows the logotype to stand out as a distinctive, generous, and vibrant sign. Through its presence and “living form,” it reinforces ideas of openness, interdisciplinarity, emotion, and musicality.",
   "credits": [
-    { "role": "Creative direction", "names": ["Name Surname"] },
-    { "role": "Design", "names": ["Name Surname", "Name Surname"] },
-    { "role": "Motion", "names": ["Name Surname"] }
+    { "role": "Creative direction", "names": ["Patrick Paleta (Chevalvert)"] },
+    { "role": "Design", "names": ["Patrick Paleta", "Noémie Erb"] },
+    { "role": "Motion", "names": ["Stéphane Buellet", "warans"] }
   ],
   "medias": [
         { "type": "image", "url": "https://warans.gumlet.io/01_04-STEREO-Image01.webp" },
+        { "type": "image", "url": "https://warans.gumlet.io/12_04-STEREO-Image07.webp" },
         { "type": "video", "id": "68c98ef7b0773038fc4d6c03" },
         { "type": "video", "id": "68c98ef8d32bbf54d8631aa8" },
         { "type": "image", "url": "https://warans.gumlet.io/04_04-STEREO-Image02.webp" },
         { "type": "video", "id": "68ca7d6cd32bbf54d86dc24c" },
         { "type": "image", "url": "https://warans.gumlet.io/06_04-STEREO-Image03.webp" },
         { "type": "video", "id": "68c98ef7b19d10518c4a5507" },
-        { "type": "video", "id": "68ca7b92b0773038fc581739" }
+        { "type": "image", "url": "https://warans.gumlet.io/10_04-STEREO-Image05.webp" },
+        { "type": "video", "id": "68ca7b92b0773038fc581739" },
+        { "type": "image", "url": "https://warans.gumlet.io/14_04-STEREO-Image09-02.webp" },
+        { "type": "image", "url": "https://warans.gumlet.io/11_04-STEREO-Image06.webp" },
+        { "type": "image", "url": "https://warans.gumlet.io/13_04-STEREO-Image08-02.webp" },
+        { "type": "image", "url": "https://warans.gumlet.io/08_04-STEREO-Image04.png" }
 			]
 }
