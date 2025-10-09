@@ -9,17 +9,17 @@
     { "role": "Motion", "names": ["Stéphane Buellet","warans"] }
   ],
   "medias": [
-				{ "type": "image", "url": "https://warans.gumlet.io/01_01-PF-Image01.webp" },
+        { "type": "image", "url": "https://warans.gumlet.io/01_01-PF-Image01.webp" },
 				{ "type": "video", "id": "68c98eaeb0773038fc4d6261", "ratio": "16/9" },
 				{ "type": "image", "url": "https://warans.gumlet.io/03_01-PF-Image02.webp" },
 				{ "type": "video", "id": "68dbcd28a4135504a2e1719a" },
 				{ "type": "image", "url": "https://warans.gumlet.io/05_01-PF-Image03.webp" },
 				{ "type": "video", "id": "68c98eaeb0773038fc4d6263" },
 				{ "type": "video", "id": "68c98eaeb19d10518c4a513a" },
-				{ "type": "image", "url": "https://warans.gumlet.io/08_01-PF-Image04.webp" },
 				{ "type": "video", "id": "68c98eaeb0773038fc4d627b" },
         { "type": "image", "url": "https://warans.gumlet.io/12_01-PF-Image05.webp" },
-				{ "type": "video", "id": "68dbcf66a4135504a2e1ccb4" }
+				{ "type": "video", "id": "68dbcf66a4135504a2e1ccb4" },
+        { "type": "image", "url": "https://warans.gumlet.io/08_01-PF-Image04-02.webp" }
 			],
   "showInfo": true
 }

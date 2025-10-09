@@ -12,6 +12,7 @@
         { "type": "image", "url": "https://warans.gumlet.io/01_04-STEREO-Image01.webp" },
         { "type": "image", "url": "https://warans.gumlet.io/12_04-STEREO-Image07.webp" },
         { "type": "video", "id": "68c98ef7b0773038fc4d6c03" },
+        { "type": "image", "url": "https://warans.gumlet.io/17_04-STEREO-Image12-02.webp" },
         { "type": "video", "id": "68c98ef8d32bbf54d8631aa8" },
         { "type": "image", "url": "https://warans.gumlet.io/04_04-STEREO-Image02.webp" },
         { "type": "video", "id": "68ca7d6cd32bbf54d86dc24c" },
@@ -22,6 +23,6 @@
         { "type": "image", "url": "https://warans.gumlet.io/14_04-STEREO-Image09-02.webp" },
         { "type": "image", "url": "https://warans.gumlet.io/11_04-STEREO-Image06.webp" },
         { "type": "image", "url": "https://warans.gumlet.io/13_04-STEREO-Image08-02.webp" },
-        { "type": "image", "url": "https://warans.gumlet.io/08_04-STEREO-Image04.png" }
+        { "type": "image", "url": "https://warans.gumlet.io/08_04-STEREO-Image04.webp" }
 			]
 }
