@@ -6,7 +6,8 @@
   "credits": [
     { "role": "Creative direction", "names": ["Patrick Paleta (Chevalvert)"] },
     { "role": "Design", "names": ["Patrick Paleta", "Mathieu Mohamad"] },
-    { "role": "Motion", "names": ["warans"] }
+    { "role": "Motion", "names": ["warans"] },
+    { "role": "Clients", "names": ["Jean-Charles Vergne", "Florence Furic"] }
   ],
   "medias": [
         { "type": "image", "url": "https://warans.gumlet.io/01_02-FRAC-Image01.webp" },

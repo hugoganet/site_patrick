@@ -6,7 +6,8 @@
   "credits": [
     { "role": "Creative direction", "names": ["Patrick Paleta (Chevalvert)"] },
     { "role": "Design", "names": ["Mathieu Mohamad"] },
-    { "role": "Motion", "names": ["Stéphane Buellet","warans"] }
+    { "role": "Motion", "names": ["Stéphane Buellet","warans"] },
+    { "role": "Clients", "names": ["Marion Fraboulet", "Laurence Salmon"] }
   ],
   "medias": [
         { "type": "image", "url": "https://warans.gumlet.io/01_01-PF-Image01.webp" },

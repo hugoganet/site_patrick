@@ -6,7 +6,8 @@
   "credits": [
     { "role": "Creative direction", "names": ["Patrick Paleta (Chevalvert)"] },
     { "role": "Design", "names": ["Patrick Paleta", "Noémie Erb"] },
-    { "role": "Motion", "names": ["Stéphane Buellet", "warans"] }
+    { "role": "Motion", "names": ["Stéphane Buellet", "warans"] },
+    { "role": "Clients", "names": ["Jean-Philippe Ollivier", "Théo Rossier"] }
   ],
   "medias": [
         { "type": "image", "url": "https://warans.gumlet.io/01_04-STEREO-Image01.webp" },
