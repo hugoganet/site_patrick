@@ -81,7 +81,7 @@
 
     /* White zone mobile layout */
     .gallery-white-zone {
-		width: 100% !important;
+		width: auto !important;
 		margin: var(--mobile-margin) !important;
     }
 
@@ -169,9 +169,9 @@
     }
 
     /* White zone mobile layout - ensure 25px left margin */
-    .gallery-white-zone {
+    /* .gallery-white-zone {
         padding-left: 0 !important;
-    }
+    } */
 }
 
 /* Modal responsive styles */
